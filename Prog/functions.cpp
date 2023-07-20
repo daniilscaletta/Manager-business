@@ -3,6 +3,7 @@
 #include <string>
 #include <fstream>
 #include <vector>
+#include <algorithm>
 
 using namespace std;
 
@@ -90,3 +91,54 @@ vector<string> find_one_note(const string& note_to_find)
 
     return found_notes;
 }
+
+void remove_note(int number_of_note)
+{
+    ifstream fin;
+    fin.open(path);
+
+    if(!fin.is_open())
+    {
+        cout << "file is NOT opened" << endl;
+        exit(EXIT_FAILURE);
+    }
+
+    vector<string> notes;
+    string one_note;
+    while(getline(fin, one_note))
+    {
+        notes.push_back(one_note);
+        if(fin.eof()) break;
+    }
+    notes.erase(notes.begin() + number_of_note - 1);
+    fin.close();
+
+    ofstream fout;
+    fout.open(path, ofstream::out);
+
+    if(!fout.is_open())
+    {
+        cout << "file is NOT opened" << endl;
+        exit(EXIT_FAILURE);
+    }
+
+    for(auto& a : notes) fout << a << endl;
+    fout.close();
+    cout << "Note deleted! " << endl;
+}
+
+void remove_all_notes()
+{
+    ofstream file;
+
+    file.open(path, ofstream::out);
+    if(!file.is_open())
+    {
+        cout << "file is NOT opened" << endl;
+        exit(EXIT_FAILURE);
+    }
+
+    file.close();
+    cout << "All notes are deleted!" << endl;
+}
+

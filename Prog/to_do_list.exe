@@ -40371,7 +40371,15 @@ int main(void)
                     getline(cin, note_to_find);
 
                     vector<string> found_notes = find_one_note(note_to_find);
-                    for(auto& a : found_notes) cout << a << endl;
+                    if(found_notes.size() != 0)
+                    {
+                        for(auto& a : found_notes) cout << a << endl;
+                    }
+                    else
+                    {
+                        cout << "Not such note!" << endl;
+                    }
+
                     break;
                 }
 

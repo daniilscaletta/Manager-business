@@ -40315,6 +40315,10 @@ void add_note(const string& str);
 void see_all_notes();
 
 vector<string> find_one_note(const string& note_to_find);
+
+void remove_note(int number_of_note);
+
+void remove_all_notes();
 # 3 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp" 2
 
 # 1 "C:/mingw64/include/c++/13.1.0/fstream" 1 3
@@ -42830,9 +42834,6683 @@ namespace std
 # 1301 "C:/mingw64/include/c++/13.1.0/fstream" 2 3
 # 5 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp" 2
 
+# 1 "C:/mingw64/include/c++/13.1.0/algorithm" 1 3
+# 58 "C:/mingw64/include/c++/13.1.0/algorithm" 3
+       
+# 59 "C:/mingw64/include/c++/13.1.0/algorithm" 3
 
 
-# 7 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp"
+# 1 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 1 3
+# 59 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+# 1 "C:/mingw64/include/c++/13.1.0/bits/algorithmfwd.h" 1 3
+# 33 "C:/mingw64/include/c++/13.1.0/bits/algorithmfwd.h" 3
+       
+# 34 "C:/mingw64/include/c++/13.1.0/bits/algorithmfwd.h" 3
+# 42 "C:/mingw64/include/c++/13.1.0/bits/algorithmfwd.h" 3
+namespace std
+{
+
+# 199 "C:/mingw64/include/c++/13.1.0/bits/algorithmfwd.h" 3
+  template<typename _IIter, typename _Predicate>
+   
+    bool
+    all_of(_IIter, _IIter, _Predicate);
+
+  template<typename _IIter, typename _Predicate>
+   
+    bool
+    any_of(_IIter, _IIter, _Predicate);
+
+
+  template<typename _FIter, typename _Tp>
+   
+    bool
+    binary_search(_FIter, _FIter, const _Tp&);
+
+  template<typename _FIter, typename _Tp, typename _Compare>
+   
+    bool
+    binary_search(_FIter, _FIter, const _Tp&, _Compare);
+
+
+  template<typename _Tp>
+    constexpr
+    const _Tp&
+    clamp(const _Tp&, const _Tp&, const _Tp&);
+
+  template<typename _Tp, typename _Compare>
+    constexpr
+    const _Tp&
+    clamp(const _Tp&, const _Tp&, const _Tp&, _Compare);
+
+
+  template<typename _IIter, typename _OIter>
+   
+    _OIter
+    copy(_IIter, _IIter, _OIter);
+
+  template<typename _BIter1, typename _BIter2>
+   
+    _BIter2
+    copy_backward(_BIter1, _BIter1, _BIter2);
+
+
+  template<typename _IIter, typename _OIter, typename _Predicate>
+   
+    _OIter
+    copy_if(_IIter, _IIter, _OIter, _Predicate);
+
+  template<typename _IIter, typename _Size, typename _OIter>
+   
+    _OIter
+    copy_n(_IIter, _Size, _OIter);
+
+
+
+
+
+  template<typename _FIter, typename _Tp>
+   
+    pair<_FIter, _FIter>
+    equal_range(_FIter, _FIter, const _Tp&);
+
+  template<typename _FIter, typename _Tp, typename _Compare>
+   
+    pair<_FIter, _FIter>
+    equal_range(_FIter, _FIter, const _Tp&, _Compare);
+
+  template<typename _FIter, typename _Tp>
+   
+    void
+    fill(_FIter, _FIter, const _Tp&);
+
+  template<typename _OIter, typename _Size, typename _Tp>
+   
+    _OIter
+    fill_n(_OIter, _Size, const _Tp&);
+
+
+
+  template<typename _FIter1, typename _FIter2>
+   
+    _FIter1
+    find_end(_FIter1, _FIter1, _FIter2, _FIter2);
+
+  template<typename _FIter1, typename _FIter2, typename _BinaryPredicate>
+   
+    _FIter1
+    find_end(_FIter1, _FIter1, _FIter2, _FIter2, _BinaryPredicate);
+
+
+
+
+
+  template<typename _IIter, typename _Predicate>
+   
+    _IIter
+    find_if_not(_IIter, _IIter, _Predicate);
+
+
+
+
+
+
+  template<typename _IIter1, typename _IIter2>
+   
+    bool
+    includes(_IIter1, _IIter1, _IIter2, _IIter2);
+
+  template<typename _IIter1, typename _IIter2, typename _Compare>
+   
+    bool
+    includes(_IIter1, _IIter1, _IIter2, _IIter2, _Compare);
+
+  template<typename _BIter>
+    void
+    inplace_merge(_BIter, _BIter, _BIter);
+
+  template<typename _BIter, typename _Compare>
+    void
+    inplace_merge(_BIter, _BIter, _BIter, _Compare);
+
+
+  template<typename _RAIter>
+   
+    bool
+    is_heap(_RAIter, _RAIter);
+
+  template<typename _RAIter, typename _Compare>
+   
+    bool
+    is_heap(_RAIter, _RAIter, _Compare);
+
+  template<typename _RAIter>
+   
+    _RAIter
+    is_heap_until(_RAIter, _RAIter);
+
+  template<typename _RAIter, typename _Compare>
+   
+    _RAIter
+    is_heap_until(_RAIter, _RAIter, _Compare);
+
+  template<typename _IIter, typename _Predicate>
+   
+    bool
+    is_partitioned(_IIter, _IIter, _Predicate);
+
+  template<typename _FIter1, typename _FIter2>
+   
+    bool
+    is_permutation(_FIter1, _FIter1, _FIter2);
+
+  template<typename _FIter1, typename _FIter2,
+    typename _BinaryPredicate>
+   
+    bool
+    is_permutation(_FIter1, _FIter1, _FIter2, _BinaryPredicate);
+
+  template<typename _FIter>
+   
+    bool
+    is_sorted(_FIter, _FIter);
+
+  template<typename _FIter, typename _Compare>
+   
+    bool
+    is_sorted(_FIter, _FIter, _Compare);
+
+  template<typename _FIter>
+   
+    _FIter
+    is_sorted_until(_FIter, _FIter);
+
+  template<typename _FIter, typename _Compare>
+   
+    _FIter
+    is_sorted_until(_FIter, _FIter, _Compare);
+
+
+  template<typename _FIter1, typename _FIter2>
+   
+    void
+    iter_swap(_FIter1, _FIter2);
+
+  template<typename _FIter, typename _Tp>
+   
+    _FIter
+    lower_bound(_FIter, _FIter, const _Tp&);
+
+  template<typename _FIter, typename _Tp, typename _Compare>
+   
+    _FIter
+    lower_bound(_FIter, _FIter, const _Tp&, _Compare);
+
+  template<typename _RAIter>
+   
+    void
+    make_heap(_RAIter, _RAIter);
+
+  template<typename _RAIter, typename _Compare>
+   
+    void
+    make_heap(_RAIter, _RAIter, _Compare);
+
+  template<typename _Tp>
+    constexpr
+    const _Tp&
+    max(const _Tp&, const _Tp&);
+
+  template<typename _Tp, typename _Compare>
+    constexpr
+    const _Tp&
+    max(const _Tp&, const _Tp&, _Compare);
+
+
+
+
+  template<typename _Tp>
+    constexpr
+    const _Tp&
+    min(const _Tp&, const _Tp&);
+
+  template<typename _Tp, typename _Compare>
+    constexpr
+    const _Tp&
+    min(const _Tp&, const _Tp&, _Compare);
+
+
+
+
+  template<typename _Tp>
+    constexpr
+    pair<const _Tp&, const _Tp&>
+    minmax(const _Tp&, const _Tp&);
+
+  template<typename _Tp, typename _Compare>
+    constexpr
+    pair<const _Tp&, const _Tp&>
+    minmax(const _Tp&, const _Tp&, _Compare);
+
+  template<typename _FIter>
+    constexpr
+    pair<_FIter, _FIter>
+    minmax_element(_FIter, _FIter);
+
+  template<typename _FIter, typename _Compare>
+    constexpr
+    pair<_FIter, _FIter>
+    minmax_element(_FIter, _FIter, _Compare);
+
+  template<typename _Tp>
+    constexpr
+    _Tp
+    min(initializer_list<_Tp>);
+
+  template<typename _Tp, typename _Compare>
+    constexpr
+    _Tp
+    min(initializer_list<_Tp>, _Compare);
+
+  template<typename _Tp>
+    constexpr
+    _Tp
+    max(initializer_list<_Tp>);
+
+  template<typename _Tp, typename _Compare>
+    constexpr
+    _Tp
+    max(initializer_list<_Tp>, _Compare);
+
+  template<typename _Tp>
+    constexpr
+    pair<_Tp, _Tp>
+    minmax(initializer_list<_Tp>);
+
+  template<typename _Tp, typename _Compare>
+    constexpr
+    pair<_Tp, _Tp>
+    minmax(initializer_list<_Tp>, _Compare);
+
+
+
+
+  template<typename _BIter>
+   
+    bool
+    next_permutation(_BIter, _BIter);
+
+  template<typename _BIter, typename _Compare>
+   
+    bool
+    next_permutation(_BIter, _BIter, _Compare);
+
+
+  template<typename _IIter, typename _Predicate>
+   
+    bool
+    none_of(_IIter, _IIter, _Predicate);
+
+
+
+
+
+  template<typename _IIter, typename _RAIter>
+   
+    _RAIter
+    partial_sort_copy(_IIter, _IIter, _RAIter, _RAIter);
+
+  template<typename _IIter, typename _RAIter, typename _Compare>
+   
+    _RAIter
+    partial_sort_copy(_IIter, _IIter, _RAIter, _RAIter, _Compare);
+
+
+
+
+  template<typename _IIter, typename _OIter1,
+    typename _OIter2, typename _Predicate>
+   
+    pair<_OIter1, _OIter2>
+    partition_copy(_IIter, _IIter, _OIter1, _OIter2, _Predicate);
+
+  template<typename _FIter, typename _Predicate>
+   
+    _FIter
+    partition_point(_FIter, _FIter, _Predicate);
+
+
+  template<typename _RAIter>
+   
+    void
+    pop_heap(_RAIter, _RAIter);
+
+  template<typename _RAIter, typename _Compare>
+   
+    void
+    pop_heap(_RAIter, _RAIter, _Compare);
+
+  template<typename _BIter>
+   
+    bool
+    prev_permutation(_BIter, _BIter);
+
+  template<typename _BIter, typename _Compare>
+   
+    bool
+    prev_permutation(_BIter, _BIter, _Compare);
+
+  template<typename _RAIter>
+   
+    void
+    push_heap(_RAIter, _RAIter);
+
+  template<typename _RAIter, typename _Compare>
+   
+    void
+    push_heap(_RAIter, _RAIter, _Compare);
+
+
+
+  template<typename _FIter, typename _Tp>
+   
+    _FIter
+    remove(_FIter, _FIter, const _Tp&);
+
+  template<typename _FIter, typename _Predicate>
+   
+    _FIter
+    remove_if(_FIter, _FIter, _Predicate);
+
+  template<typename _IIter, typename _OIter, typename _Tp>
+   
+    _OIter
+    remove_copy(_IIter, _IIter, _OIter, const _Tp&);
+
+  template<typename _IIter, typename _OIter, typename _Predicate>
+   
+    _OIter
+    remove_copy_if(_IIter, _IIter, _OIter, _Predicate);
+
+
+
+  template<typename _IIter, typename _OIter, typename _Tp>
+   
+    _OIter
+    replace_copy(_IIter, _IIter, _OIter, const _Tp&, const _Tp&);
+
+  template<typename _Iter, typename _OIter, typename _Predicate, typename _Tp>
+   
+    _OIter
+    replace_copy_if(_Iter, _Iter, _OIter, _Predicate, const _Tp&);
+
+
+
+  template<typename _BIter>
+   
+    void
+    reverse(_BIter, _BIter);
+
+  template<typename _BIter, typename _OIter>
+   
+    _OIter
+    reverse_copy(_BIter, _BIter, _OIter);
+
+inline namespace _V2 {
+
+  template<typename _FIter>
+   
+    _FIter
+    rotate(_FIter, _FIter, _FIter);
+
+}
+
+  template<typename _FIter, typename _OIter>
+   
+    _OIter
+    rotate_copy(_FIter, _FIter, _FIter, _OIter);
+# 626 "C:/mingw64/include/c++/13.1.0/bits/algorithmfwd.h" 3
+  template<typename _RAIter, typename _UGenerator>
+    void
+    shuffle(_RAIter, _RAIter, _UGenerator&&);
+
+
+  template<typename _RAIter>
+   
+    void
+    sort_heap(_RAIter, _RAIter);
+
+  template<typename _RAIter, typename _Compare>
+   
+    void
+    sort_heap(_RAIter, _RAIter, _Compare);
+
+
+  template<typename _BIter, typename _Predicate>
+    _BIter
+    stable_partition(_BIter, _BIter, _Predicate);
+# 661 "C:/mingw64/include/c++/13.1.0/bits/algorithmfwd.h" 3
+  template<typename _FIter1, typename _FIter2>
+   
+    _FIter2
+    swap_ranges(_FIter1, _FIter1, _FIter2);
+
+
+
+  template<typename _FIter>
+   
+    _FIter
+    unique(_FIter, _FIter);
+
+  template<typename _FIter, typename _BinaryPredicate>
+   
+    _FIter
+    unique(_FIter, _FIter, _BinaryPredicate);
+
+
+
+  template<typename _FIter, typename _Tp>
+   
+    _FIter
+    upper_bound(_FIter, _FIter, const _Tp&);
+
+  template<typename _FIter, typename _Tp, typename _Compare>
+   
+    _FIter
+    upper_bound(_FIter, _FIter, const _Tp&, _Compare);
+
+
+
+  template<typename _FIter>
+   
+    _FIter
+    adjacent_find(_FIter, _FIter);
+
+  template<typename _FIter, typename _BinaryPredicate>
+   
+    _FIter
+    adjacent_find(_FIter, _FIter, _BinaryPredicate);
+
+  template<typename _IIter, typename _Tp>
+   
+    typename iterator_traits<_IIter>::difference_type
+    count(_IIter, _IIter, const _Tp&);
+
+  template<typename _IIter, typename _Predicate>
+   
+    typename iterator_traits<_IIter>::difference_type
+    count_if(_IIter, _IIter, _Predicate);
+
+  template<typename _IIter1, typename _IIter2>
+   
+    bool
+    equal(_IIter1, _IIter1, _IIter2);
+
+  template<typename _IIter1, typename _IIter2, typename _BinaryPredicate>
+   
+    bool
+    equal(_IIter1, _IIter1, _IIter2, _BinaryPredicate);
+
+  template<typename _IIter, typename _Tp>
+   
+    _IIter
+    find(_IIter, _IIter, const _Tp&);
+
+  template<typename _FIter1, typename _FIter2>
+   
+    _FIter1
+    find_first_of(_FIter1, _FIter1, _FIter2, _FIter2);
+
+  template<typename _FIter1, typename _FIter2, typename _BinaryPredicate>
+   
+    _FIter1
+    find_first_of(_FIter1, _FIter1, _FIter2, _FIter2, _BinaryPredicate);
+
+  template<typename _IIter, typename _Predicate>
+   
+    _IIter
+    find_if(_IIter, _IIter, _Predicate);
+
+  template<typename _IIter, typename _Funct>
+   
+    _Funct
+    for_each(_IIter, _IIter, _Funct);
+
+  template<typename _FIter, typename _Generator>
+   
+    void
+    generate(_FIter, _FIter, _Generator);
+
+  template<typename _OIter, typename _Size, typename _Generator>
+   
+    _OIter
+    generate_n(_OIter, _Size, _Generator);
+
+  template<typename _IIter1, typename _IIter2>
+   
+    bool
+    lexicographical_compare(_IIter1, _IIter1, _IIter2, _IIter2);
+
+  template<typename _IIter1, typename _IIter2, typename _Compare>
+   
+    bool
+    lexicographical_compare(_IIter1, _IIter1, _IIter2, _IIter2, _Compare);
+
+  template<typename _FIter>
+    constexpr
+    _FIter
+    max_element(_FIter, _FIter);
+
+  template<typename _FIter, typename _Compare>
+    constexpr
+    _FIter
+    max_element(_FIter, _FIter, _Compare);
+
+  template<typename _IIter1, typename _IIter2, typename _OIter>
+   
+    _OIter
+    merge(_IIter1, _IIter1, _IIter2, _IIter2, _OIter);
+
+  template<typename _IIter1, typename _IIter2, typename _OIter,
+    typename _Compare>
+   
+    _OIter
+    merge(_IIter1, _IIter1, _IIter2, _IIter2, _OIter, _Compare);
+
+  template<typename _FIter>
+    constexpr
+    _FIter
+    min_element(_FIter, _FIter);
+
+  template<typename _FIter, typename _Compare>
+    constexpr
+    _FIter
+    min_element(_FIter, _FIter, _Compare);
+
+  template<typename _IIter1, typename _IIter2>
+   
+    pair<_IIter1, _IIter2>
+    mismatch(_IIter1, _IIter1, _IIter2);
+
+  template<typename _IIter1, typename _IIter2, typename _BinaryPredicate>
+   
+    pair<_IIter1, _IIter2>
+    mismatch(_IIter1, _IIter1, _IIter2, _BinaryPredicate);
+
+  template<typename _RAIter>
+   
+    void
+    nth_element(_RAIter, _RAIter, _RAIter);
+
+  template<typename _RAIter, typename _Compare>
+   
+    void
+    nth_element(_RAIter, _RAIter, _RAIter, _Compare);
+
+  template<typename _RAIter>
+   
+    void
+    partial_sort(_RAIter, _RAIter, _RAIter);
+
+  template<typename _RAIter, typename _Compare>
+   
+    void
+    partial_sort(_RAIter, _RAIter, _RAIter, _Compare);
+
+  template<typename _BIter, typename _Predicate>
+   
+    _BIter
+    partition(_BIter, _BIter, _Predicate);
+
+
+  template<typename _RAIter>
+    void
+    random_shuffle(_RAIter, _RAIter);
+
+  template<typename _RAIter, typename _Generator>
+    void
+    random_shuffle(_RAIter, _RAIter,
+
+     _Generator&&);
+
+
+
+
+
+  template<typename _FIter, typename _Tp>
+   
+    void
+    replace(_FIter, _FIter, const _Tp&, const _Tp&);
+
+  template<typename _FIter, typename _Predicate, typename _Tp>
+   
+    void
+    replace_if(_FIter, _FIter, _Predicate, const _Tp&);
+
+  template<typename _FIter1, typename _FIter2>
+   
+    _FIter1
+    search(_FIter1, _FIter1, _FIter2, _FIter2);
+
+  template<typename _FIter1, typename _FIter2, typename _BinaryPredicate>
+   
+    _FIter1
+    search(_FIter1, _FIter1, _FIter2, _FIter2, _BinaryPredicate);
+
+  template<typename _FIter, typename _Size, typename _Tp>
+   
+    _FIter
+    search_n(_FIter, _FIter, _Size, const _Tp&);
+
+  template<typename _FIter, typename _Size, typename _Tp,
+    typename _BinaryPredicate>
+   
+    _FIter
+    search_n(_FIter, _FIter, _Size, const _Tp&, _BinaryPredicate);
+
+  template<typename _IIter1, typename _IIter2, typename _OIter>
+   
+    _OIter
+    set_difference(_IIter1, _IIter1, _IIter2, _IIter2, _OIter);
+
+  template<typename _IIter1, typename _IIter2, typename _OIter,
+    typename _Compare>
+   
+    _OIter
+    set_difference(_IIter1, _IIter1, _IIter2, _IIter2, _OIter, _Compare);
+
+  template<typename _IIter1, typename _IIter2, typename _OIter>
+   
+    _OIter
+    set_intersection(_IIter1, _IIter1, _IIter2, _IIter2, _OIter);
+
+  template<typename _IIter1, typename _IIter2, typename _OIter,
+    typename _Compare>
+   
+    _OIter
+    set_intersection(_IIter1, _IIter1, _IIter2, _IIter2, _OIter, _Compare);
+
+  template<typename _IIter1, typename _IIter2, typename _OIter>
+   
+    _OIter
+    set_symmetric_difference(_IIter1, _IIter1, _IIter2, _IIter2, _OIter);
+
+  template<typename _IIter1, typename _IIter2, typename _OIter,
+    typename _Compare>
+   
+    _OIter
+    set_symmetric_difference(_IIter1, _IIter1, _IIter2, _IIter2,
+        _OIter, _Compare);
+
+  template<typename _IIter1, typename _IIter2, typename _OIter>
+   
+    _OIter
+    set_union(_IIter1, _IIter1, _IIter2, _IIter2, _OIter);
+
+  template<typename _IIter1, typename _IIter2, typename _OIter,
+    typename _Compare>
+   
+    _OIter
+    set_union(_IIter1, _IIter1, _IIter2, _IIter2, _OIter, _Compare);
+
+  template<typename _RAIter>
+   
+    void
+    sort(_RAIter, _RAIter);
+
+  template<typename _RAIter, typename _Compare>
+   
+    void
+    sort(_RAIter, _RAIter, _Compare);
+
+  template<typename _RAIter>
+    void
+    stable_sort(_RAIter, _RAIter);
+
+  template<typename _RAIter, typename _Compare>
+    void
+    stable_sort(_RAIter, _RAIter, _Compare);
+
+  template<typename _IIter, typename _OIter, typename _UnaryOperation>
+   
+    _OIter
+    transform(_IIter, _IIter, _OIter, _UnaryOperation);
+
+  template<typename _IIter1, typename _IIter2, typename _OIter,
+    typename _BinaryOperation>
+   
+    _OIter
+    transform(_IIter1, _IIter1, _IIter2, _OIter, _BinaryOperation);
+
+  template<typename _IIter, typename _OIter>
+   
+    _OIter
+    unique_copy(_IIter, _IIter, _OIter);
+
+  template<typename _IIter, typename _OIter, typename _BinaryPredicate>
+   
+    _OIter
+    unique_copy(_IIter, _IIter, _OIter, _BinaryPredicate);
+
+
+
+}
+# 60 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 2 3
+
+# 1 "C:/mingw64/include/c++/13.1.0/bits/stl_heap.h" 1 3
+# 63 "C:/mingw64/include/c++/13.1.0/bits/stl_heap.h" 3
+namespace std
+{
+
+
+
+
+
+
+
+  template<typename _RandomAccessIterator, typename _Distance,
+    typename _Compare>
+   
+    _Distance
+    __is_heap_until(_RandomAccessIterator __first, _Distance __n,
+      _Compare& __comp)
+    {
+      _Distance __parent = 0;
+      for (_Distance __child = 1; __child < __n; ++__child)
+ {
+   if (__comp(__first + __parent, __first + __child))
+     return __child;
+   if ((__child & 1) == 0)
+     ++__parent;
+ }
+      return __n;
+    }
+
+
+
+  template<typename _RandomAccessIterator, typename _Distance>
+   
+    inline bool
+    __is_heap(_RandomAccessIterator __first, _Distance __n)
+    {
+      __gnu_cxx::__ops::_Iter_less_iter __comp;
+      return std::__is_heap_until(__first, __n, __comp) == __n;
+    }
+
+  template<typename _RandomAccessIterator, typename _Compare,
+    typename _Distance>
+   
+    inline bool
+    __is_heap(_RandomAccessIterator __first, _Compare __comp, _Distance __n)
+    {
+      typedef __decltype(__comp) _Cmp;
+      __gnu_cxx::__ops::_Iter_comp_iter<_Cmp> __cmp(std::move(__comp));
+      return std::__is_heap_until(__first, __n, __cmp) == __n;
+    }
+
+  template<typename _RandomAccessIterator>
+   
+    inline bool
+    __is_heap(_RandomAccessIterator __first, _RandomAccessIterator __last)
+    { return std::__is_heap(__first, std::distance(__first, __last)); }
+
+  template<typename _RandomAccessIterator, typename _Compare>
+   
+    inline bool
+    __is_heap(_RandomAccessIterator __first, _RandomAccessIterator __last,
+       _Compare __comp)
+    {
+      return std::__is_heap(__first, std::move(__comp),
+       std::distance(__first, __last));
+    }
+
+
+
+
+  template<typename _RandomAccessIterator, typename _Distance, typename _Tp,
+    typename _Compare>
+   
+    void
+    __push_heap(_RandomAccessIterator __first,
+  _Distance __holeIndex, _Distance __topIndex, _Tp __value,
+  _Compare& __comp)
+    {
+      _Distance __parent = (__holeIndex - 1) / 2;
+      while (__holeIndex > __topIndex && __comp(__first + __parent, __value))
+ {
+   *(__first + __holeIndex) = std::move(*(__first + __parent));
+   __holeIndex = __parent;
+   __parent = (__holeIndex - 1) / 2;
+ }
+      *(__first + __holeIndex) = std::move(__value);
+    }
+# 159 "C:/mingw64/include/c++/13.1.0/bits/stl_heap.h" 3
+  template<typename _RandomAccessIterator>
+   
+    inline void
+    push_heap(_RandomAccessIterator __first, _RandomAccessIterator __last)
+    {
+      typedef typename iterator_traits<_RandomAccessIterator>::value_type
+   _ValueType;
+      typedef typename iterator_traits<_RandomAccessIterator>::difference_type
+   _DistanceType;
+
+
+     
+
+     
+      ;
+      ;
+      ;
+
+      __gnu_cxx::__ops::_Iter_less_val __comp;
+      _ValueType __value = std::move(*(__last - 1));
+      std::__push_heap(__first, _DistanceType((__last - __first) - 1),
+         _DistanceType(0), std::move(__value), __comp);
+    }
+# 195 "C:/mingw64/include/c++/13.1.0/bits/stl_heap.h" 3
+  template<typename _RandomAccessIterator, typename _Compare>
+   
+    inline void
+    push_heap(_RandomAccessIterator __first, _RandomAccessIterator __last,
+       _Compare __comp)
+    {
+      typedef typename iterator_traits<_RandomAccessIterator>::value_type
+   _ValueType;
+      typedef typename iterator_traits<_RandomAccessIterator>::difference_type
+   _DistanceType;
+
+
+     
+
+      ;
+      ;
+      ;
+
+      __decltype(__gnu_cxx::__ops::__iter_comp_val(std::move(__comp)))
+ __cmp(std::move(__comp));
+      _ValueType __value = std::move(*(__last - 1));
+      std::__push_heap(__first, _DistanceType((__last - __first) - 1),
+         _DistanceType(0), std::move(__value), __cmp);
+    }
+
+  template<typename _RandomAccessIterator, typename _Distance,
+    typename _Tp, typename _Compare>
+   
+    void
+    __adjust_heap(_RandomAccessIterator __first, _Distance __holeIndex,
+    _Distance __len, _Tp __value, _Compare __comp)
+    {
+      const _Distance __topIndex = __holeIndex;
+      _Distance __secondChild = __holeIndex;
+      while (__secondChild < (__len - 1) / 2)
+ {
+   __secondChild = 2 * (__secondChild + 1);
+   if (__comp(__first + __secondChild,
+       __first + (__secondChild - 1)))
+     __secondChild--;
+   *(__first + __holeIndex) = std::move(*(__first + __secondChild));
+   __holeIndex = __secondChild;
+ }
+      if ((__len & 1) == 0 && __secondChild == (__len - 2) / 2)
+ {
+   __secondChild = 2 * (__secondChild + 1);
+   *(__first + __holeIndex) = std::move(*(__first + (__secondChild - 1)))
+                                  ;
+   __holeIndex = __secondChild - 1;
+ }
+      __decltype(__gnu_cxx::__ops::__iter_comp_val(std::move(__comp)))
+ __cmp(std::move(__comp));
+      std::__push_heap(__first, __holeIndex, __topIndex,
+         std::move(__value), __cmp);
+    }
+
+  template<typename _RandomAccessIterator, typename _Compare>
+   
+    inline void
+    __pop_heap(_RandomAccessIterator __first, _RandomAccessIterator __last,
+        _RandomAccessIterator __result, _Compare& __comp)
+    {
+      typedef typename iterator_traits<_RandomAccessIterator>::value_type
+ _ValueType;
+      typedef typename iterator_traits<_RandomAccessIterator>::difference_type
+ _DistanceType;
+
+      _ValueType __value = std::move(*__result);
+      *__result = std::move(*__first);
+      std::__adjust_heap(__first, _DistanceType(0),
+    _DistanceType(__last - __first),
+    std::move(__value), __comp);
+    }
+# 280 "C:/mingw64/include/c++/13.1.0/bits/stl_heap.h" 3
+  template<typename _RandomAccessIterator>
+   
+    inline void
+    pop_heap(_RandomAccessIterator __first, _RandomAccessIterator __last)
+    {
+
+     
+
+     
+
+      ;
+      ;
+      ;
+      ;
+
+      if (__last - __first > 1)
+ {
+   --__last;
+   __gnu_cxx::__ops::_Iter_less_iter __comp;
+   std::__pop_heap(__first, __last, __last, __comp);
+ }
+    }
+# 314 "C:/mingw64/include/c++/13.1.0/bits/stl_heap.h" 3
+  template<typename _RandomAccessIterator, typename _Compare>
+   
+    inline void
+    pop_heap(_RandomAccessIterator __first,
+      _RandomAccessIterator __last, _Compare __comp)
+    {
+
+     
+
+      ;
+      ;
+      ;
+      ;
+
+      if (__last - __first > 1)
+ {
+   typedef __decltype(__comp) _Cmp;
+   __gnu_cxx::__ops::_Iter_comp_iter<_Cmp> __cmp(std::move(__comp));
+   --__last;
+   std::__pop_heap(__first, __last, __last, __cmp);
+ }
+    }
+
+  template<typename _RandomAccessIterator, typename _Compare>
+   
+    void
+    __make_heap(_RandomAccessIterator __first, _RandomAccessIterator __last,
+  _Compare& __comp)
+    {
+      typedef typename iterator_traits<_RandomAccessIterator>::value_type
+   _ValueType;
+      typedef typename iterator_traits<_RandomAccessIterator>::difference_type
+   _DistanceType;
+
+      if (__last - __first < 2)
+ return;
+
+      const _DistanceType __len = __last - __first;
+      _DistanceType __parent = (__len - 2) / 2;
+      while (true)
+ {
+   _ValueType __value = std::move(*(__first + __parent));
+   std::__adjust_heap(__first, __parent, __len, std::move(__value),
+        __comp);
+   if (__parent == 0)
+     return;
+   __parent--;
+ }
+    }
+# 372 "C:/mingw64/include/c++/13.1.0/bits/stl_heap.h" 3
+  template<typename _RandomAccessIterator>
+   
+    inline void
+    make_heap(_RandomAccessIterator __first, _RandomAccessIterator __last)
+    {
+
+     
+
+     
+
+      ;
+      ;
+
+      __gnu_cxx::__ops::_Iter_less_iter __comp;
+      std::__make_heap(__first, __last, __comp);
+    }
+# 399 "C:/mingw64/include/c++/13.1.0/bits/stl_heap.h" 3
+  template<typename _RandomAccessIterator, typename _Compare>
+   
+    inline void
+    make_heap(_RandomAccessIterator __first, _RandomAccessIterator __last,
+       _Compare __comp)
+    {
+
+     
+
+      ;
+      ;
+
+      typedef __decltype(__comp) _Cmp;
+      __gnu_cxx::__ops::_Iter_comp_iter<_Cmp> __cmp(std::move(__comp));
+      std::__make_heap(__first, __last, __cmp);
+    }
+
+  template<typename _RandomAccessIterator, typename _Compare>
+   
+    void
+    __sort_heap(_RandomAccessIterator __first, _RandomAccessIterator __last,
+  _Compare& __comp)
+    {
+      while (__last - __first > 1)
+ {
+   --__last;
+   std::__pop_heap(__first, __last, __last, __comp);
+ }
+    }
+# 437 "C:/mingw64/include/c++/13.1.0/bits/stl_heap.h" 3
+  template<typename _RandomAccessIterator>
+   
+    inline void
+    sort_heap(_RandomAccessIterator __first, _RandomAccessIterator __last)
+    {
+
+     
+
+     
+
+      ;
+      ;
+      ;
+
+      __gnu_cxx::__ops::_Iter_less_iter __comp;
+      std::__sort_heap(__first, __last, __comp);
+    }
+# 465 "C:/mingw64/include/c++/13.1.0/bits/stl_heap.h" 3
+  template<typename _RandomAccessIterator, typename _Compare>
+   
+    inline void
+    sort_heap(_RandomAccessIterator __first, _RandomAccessIterator __last,
+       _Compare __comp)
+    {
+
+     
+
+      ;
+      ;
+      ;
+
+      typedef __decltype(__comp) _Cmp;
+      __gnu_cxx::__ops::_Iter_comp_iter<_Cmp> __cmp(std::move(__comp));
+      std::__sort_heap(__first, __last, __cmp);
+    }
+# 494 "C:/mingw64/include/c++/13.1.0/bits/stl_heap.h" 3
+  template<typename _RandomAccessIterator>
+   
+    inline _RandomAccessIterator
+    is_heap_until(_RandomAccessIterator __first, _RandomAccessIterator __last)
+    {
+
+     
+
+     
+
+      ;
+      ;
+
+      __gnu_cxx::__ops::_Iter_less_iter __comp;
+      return __first +
+ std::__is_heap_until(__first, std::distance(__first, __last), __comp);
+    }
+# 523 "C:/mingw64/include/c++/13.1.0/bits/stl_heap.h" 3
+  template<typename _RandomAccessIterator, typename _Compare>
+   
+    inline _RandomAccessIterator
+    is_heap_until(_RandomAccessIterator __first, _RandomAccessIterator __last,
+    _Compare __comp)
+    {
+
+     
+
+      ;
+      ;
+
+      typedef __decltype(__comp) _Cmp;
+      __gnu_cxx::__ops::_Iter_comp_iter<_Cmp> __cmp(std::move(__comp));
+      return __first
+ + std::__is_heap_until(__first, std::distance(__first, __last), __cmp);
+    }
+# 548 "C:/mingw64/include/c++/13.1.0/bits/stl_heap.h" 3
+  template<typename _RandomAccessIterator>
+   
+    inline bool
+    is_heap(_RandomAccessIterator __first, _RandomAccessIterator __last)
+    { return std::is_heap_until(__first, __last) == __last; }
+# 562 "C:/mingw64/include/c++/13.1.0/bits/stl_heap.h" 3
+  template<typename _RandomAccessIterator, typename _Compare>
+   
+    inline bool
+    is_heap(_RandomAccessIterator __first, _RandomAccessIterator __last,
+     _Compare __comp)
+    {
+
+     
+
+      ;
+      ;
+
+      const auto __dist = std::distance(__first, __last);
+      typedef __decltype(__comp) _Cmp;
+      __gnu_cxx::__ops::_Iter_comp_iter<_Cmp> __cmp(std::move(__comp));
+      return std::__is_heap_until(__first, __dist, __cmp) == __dist;
+    }
+
+
+
+}
+# 62 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 2 3
+
+
+
+# 1 "C:/mingw64/include/c++/13.1.0/bits/uniform_int_dist.h" 1 3
+# 41 "C:/mingw64/include/c++/13.1.0/bits/uniform_int_dist.h" 3
+namespace std
+{
+
+# 58 "C:/mingw64/include/c++/13.1.0/bits/uniform_int_dist.h" 3
+  namespace __detail
+  {
+
+
+
+    template<typename _Tp>
+      constexpr bool
+      _Power_of_2(_Tp __x)
+      {
+ return ((__x - 1) & __x) == 0;
+      }
+  }
+
+
+
+
+
+
+  template<typename _IntType = int>
+    class uniform_int_distribution
+    {
+      static_assert(std::is_integral<_IntType>::value,
+      "template argument must be an integral type");
+
+    public:
+
+      typedef _IntType result_type;
+
+      struct param_type
+      {
+ typedef uniform_int_distribution<_IntType> distribution_type;
+
+ param_type() : param_type(0) { }
+
+ explicit
+ param_type(_IntType __a,
+     _IntType __b = __gnu_cxx::__int_traits<_IntType>::__max)
+ : _M_a(__a), _M_b(__b)
+ {
+   do { if (std::__is_constant_evaluated() && !bool(_M_a <= _M_b)) __builtin_unreachable(); } while (false);
+ }
+
+ result_type
+ a() const
+ { return _M_a; }
+
+ result_type
+ b() const
+ { return _M_b; }
+
+ friend bool
+ operator==(const param_type& __p1, const param_type& __p2)
+ { return __p1._M_a == __p2._M_a && __p1._M_b == __p2._M_b; }
+
+ friend bool
+ operator!=(const param_type& __p1, const param_type& __p2)
+ { return !(__p1 == __p2); }
+
+      private:
+ _IntType _M_a;
+ _IntType _M_b;
+      };
+
+    public:
+
+
+
+      uniform_int_distribution() : uniform_int_distribution(0) { }
+
+
+
+
+      explicit
+      uniform_int_distribution(_IntType __a,
+          _IntType __b
+     = __gnu_cxx::__int_traits<_IntType>::__max)
+      : _M_param(__a, __b)
+      { }
+
+      explicit
+      uniform_int_distribution(const param_type& __p)
+      : _M_param(__p)
+      { }
+
+
+
+
+
+
+      void
+      reset() { }
+
+      result_type
+      a() const
+      { return _M_param.a(); }
+
+      result_type
+      b() const
+      { return _M_param.b(); }
+
+
+
+
+      param_type
+      param() const
+      { return _M_param; }
+
+
+
+
+
+      void
+      param(const param_type& __param)
+      { _M_param = __param; }
+
+
+
+
+      result_type
+      min() const
+      { return this->a(); }
+
+
+
+
+      result_type
+      max() const
+      { return this->b(); }
+
+
+
+
+      template<typename _UniformRandomBitGenerator>
+ result_type
+ operator()(_UniformRandomBitGenerator& __urng)
+        { return this->operator()(__urng, _M_param); }
+
+      template<typename _UniformRandomBitGenerator>
+ result_type
+ operator()(_UniformRandomBitGenerator& __urng,
+     const param_type& __p);
+
+      template<typename _ForwardIterator,
+        typename _UniformRandomBitGenerator>
+ void
+ __generate(_ForwardIterator __f, _ForwardIterator __t,
+     _UniformRandomBitGenerator& __urng)
+ { this->__generate(__f, __t, __urng, _M_param); }
+
+      template<typename _ForwardIterator,
+        typename _UniformRandomBitGenerator>
+ void
+ __generate(_ForwardIterator __f, _ForwardIterator __t,
+     _UniformRandomBitGenerator& __urng,
+     const param_type& __p)
+ { this->__generate_impl(__f, __t, __urng, __p); }
+
+      template<typename _UniformRandomBitGenerator>
+ void
+ __generate(result_type* __f, result_type* __t,
+     _UniformRandomBitGenerator& __urng,
+     const param_type& __p)
+ { this->__generate_impl(__f, __t, __urng, __p); }
+
+
+
+
+
+      friend bool
+      operator==(const uniform_int_distribution& __d1,
+   const uniform_int_distribution& __d2)
+      { return __d1._M_param == __d2._M_param; }
+
+    private:
+      template<typename _ForwardIterator,
+        typename _UniformRandomBitGenerator>
+ void
+ __generate_impl(_ForwardIterator __f, _ForwardIterator __t,
+   _UniformRandomBitGenerator& __urng,
+   const param_type& __p);
+
+      param_type _M_param;
+
+
+
+
+      template<typename _Wp, typename _Urbg, typename _Up>
+ static _Up
+ _S_nd(_Urbg& __g, _Up __range)
+ {
+   using _Up_traits = __gnu_cxx::__int_traits<_Up>;
+   using _Wp_traits = __gnu_cxx::__int_traits<_Wp>;
+   static_assert(!_Up_traits::__is_signed, "U must be unsigned");
+   static_assert(!_Wp_traits::__is_signed, "W must be unsigned");
+   static_assert(_Wp_traits::__digits == (2 * _Up_traits::__digits),
+   "W must be twice as wide as U");
+
+
+
+
+   _Wp __product = _Wp(__g()) * _Wp(__range);
+   _Up __low = _Up(__product);
+   if (__low < __range)
+     {
+       _Up __threshold = -__range % __range;
+       while (__low < __threshold)
+  {
+    __product = _Wp(__g()) * _Wp(__range);
+    __low = _Up(__product);
+  }
+     }
+   return __product >> _Up_traits::__digits;
+ }
+    };
+
+  template<typename _IntType>
+    template<typename _UniformRandomBitGenerator>
+      typename uniform_int_distribution<_IntType>::result_type
+      uniform_int_distribution<_IntType>::
+      operator()(_UniformRandomBitGenerator& __urng,
+   const param_type& __param)
+      {
+ typedef typename _UniformRandomBitGenerator::result_type _Gresult_type;
+ typedef typename make_unsigned<result_type>::type __utype;
+ typedef typename common_type<_Gresult_type, __utype>::type __uctype;
+
+ constexpr __uctype __urngmin = _UniformRandomBitGenerator::min();
+ constexpr __uctype __urngmax = _UniformRandomBitGenerator::max();
+ static_assert( __urngmin < __urngmax,
+     "Uniform random bit generator must define min() < max()");
+ constexpr __uctype __urngrange = __urngmax - __urngmin;
+
+ const __uctype __urange
+   = __uctype(__param.b()) - __uctype(__param.a());
+
+ __uctype __ret;
+ if (__urngrange > __urange)
+   {
+
+
+     const __uctype __uerange = __urange + 1;
+
+
+
+     if constexpr (__urngrange == 0xffffffffffffffffULL)
+       {
+
+
+  long long unsigned int __u64erange = __uerange;
+  __ret = __extension__ _S_nd<unsigned __int128>(__urng,
+              __u64erange);
+       }
+     else
+
+     if constexpr (__urngrange == 0xffffffffU)
+       {
+
+
+  unsigned int __u32erange = __uerange;
+  __ret = _S_nd<long long unsigned int>(__urng, __u32erange);
+       }
+     else
+
+       {
+
+  const __uctype __scaling = __urngrange / __uerange;
+  const __uctype __past = __uerange * __scaling;
+  do
+    __ret = __uctype(__urng()) - __urngmin;
+  while (__ret >= __past);
+  __ret /= __scaling;
+       }
+   }
+ else if (__urngrange < __urange)
+   {
+# 348 "C:/mingw64/include/c++/13.1.0/bits/uniform_int_dist.h" 3
+     __uctype __tmp;
+     do
+       {
+  const __uctype __uerngrange = __urngrange + 1;
+  __tmp = (__uerngrange * operator()
+    (__urng, param_type(0, __urange / __uerngrange)));
+  __ret = __tmp + (__uctype(__urng()) - __urngmin);
+       }
+     while (__ret > __urange || __ret < __tmp);
+   }
+ else
+   __ret = __uctype(__urng()) - __urngmin;
+
+ return __ret + __param.a();
+      }
+
+
+  template<typename _IntType>
+    template<typename _ForwardIterator,
+      typename _UniformRandomBitGenerator>
+      void
+      uniform_int_distribution<_IntType>::
+      __generate_impl(_ForwardIterator __f, _ForwardIterator __t,
+        _UniformRandomBitGenerator& __urng,
+        const param_type& __param)
+      {
+
+ typedef typename _UniformRandomBitGenerator::result_type _Gresult_type;
+ typedef typename make_unsigned<result_type>::type __utype;
+ typedef typename common_type<_Gresult_type, __utype>::type __uctype;
+
+ static_assert( __urng.min() < __urng.max(),
+     "Uniform random bit generator must define min() < max()");
+
+ constexpr __uctype __urngmin = __urng.min();
+ constexpr __uctype __urngmax = __urng.max();
+ constexpr __uctype __urngrange = __urngmax - __urngmin;
+ const __uctype __urange
+   = __uctype(__param.b()) - __uctype(__param.a());
+
+ __uctype __ret;
+
+ if (__urngrange > __urange)
+   {
+     if (__detail::_Power_of_2(__urngrange + 1)
+  && __detail::_Power_of_2(__urange + 1))
+       {
+  while (__f != __t)
+    {
+      __ret = __uctype(__urng()) - __urngmin;
+      *__f++ = (__ret & __urange) + __param.a();
+    }
+       }
+     else
+       {
+
+  const __uctype __uerange = __urange + 1;
+  const __uctype __scaling = __urngrange / __uerange;
+  const __uctype __past = __uerange * __scaling;
+  while (__f != __t)
+    {
+      do
+        __ret = __uctype(__urng()) - __urngmin;
+      while (__ret >= __past);
+      *__f++ = __ret / __scaling + __param.a();
+    }
+       }
+   }
+ else if (__urngrange < __urange)
+   {
+# 433 "C:/mingw64/include/c++/13.1.0/bits/uniform_int_dist.h" 3
+     __uctype __tmp;
+     while (__f != __t)
+       {
+  do
+    {
+      constexpr __uctype __uerngrange = __urngrange + 1;
+      __tmp = (__uerngrange * operator()
+        (__urng, param_type(0, __urange / __uerngrange)));
+      __ret = __tmp + (__uctype(__urng()) - __urngmin);
+    }
+  while (__ret > __urange || __ret < __tmp);
+  *__f++ = __ret;
+       }
+   }
+ else
+   while (__f != __t)
+     *__f++ = __uctype(__urng()) - __urngmin + __param.a();
+      }
+
+
+
+
+}
+# 66 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 2 3
+
+
+
+# 1 "C:/mingw64/include/c++/13.1.0/bits/stl_tempbuf.h" 1 3
+# 65 "C:/mingw64/include/c++/13.1.0/bits/stl_tempbuf.h" 3
+namespace std
+{
+
+
+  namespace __detail
+  {
+    template<typename _Tp>
+      inline void
+      __return_temporary_buffer(_Tp* __p,
+    size_t __len __attribute__((__unused__)))
+      {
+
+ ::operator delete(__p, __len * sizeof(_Tp));
+
+
+
+      }
+  }
+# 101 "C:/mingw64/include/c++/13.1.0/bits/stl_tempbuf.h" 3
+  template<typename _Tp>
+    [[__deprecated__]]
+    pair<_Tp*, ptrdiff_t>
+    get_temporary_buffer(ptrdiff_t __len) noexcept
+    {
+      const ptrdiff_t __max =
+ __gnu_cxx::__numeric_traits<ptrdiff_t>::__max / sizeof(_Tp);
+      if (__len > __max)
+ __len = __max;
+
+      while (__len > 0)
+ {
+   _Tp* __tmp = static_cast<_Tp*>(::operator new(__len * sizeof(_Tp),
+       std::nothrow));
+   if (__tmp != 0)
+     return std::pair<_Tp*, ptrdiff_t>(__tmp, __len);
+   __len = __len == 1 ? 0 : ((__len + 1) / 2);
+ }
+      return std::pair<_Tp*, ptrdiff_t>(static_cast<_Tp*>(0), 0);
+    }
+# 129 "C:/mingw64/include/c++/13.1.0/bits/stl_tempbuf.h" 3
+  template<typename _Tp>
+    inline void
+    return_temporary_buffer(_Tp* __p)
+    { ::operator delete(__p); }
+
+
+
+
+
+
+  template<typename _ForwardIterator, typename _Tp>
+    class _Temporary_buffer
+    {
+
+     
+
+    public:
+      typedef _Tp value_type;
+      typedef value_type* pointer;
+      typedef pointer iterator;
+      typedef ptrdiff_t size_type;
+
+    protected:
+      size_type _M_original_len;
+      size_type _M_len;
+      pointer _M_buffer;
+
+    public:
+
+      size_type
+      size() const
+      { return _M_len; }
+
+
+      size_type
+      requested_size() const
+      { return _M_original_len; }
+
+
+      iterator
+      begin()
+      { return _M_buffer; }
+
+
+      iterator
+      end()
+      { return _M_buffer + _M_len; }
+
+
+
+
+
+      _Temporary_buffer(_ForwardIterator __seed, size_type __original_len);
+
+      ~_Temporary_buffer()
+      {
+ std::_Destroy(_M_buffer, _M_buffer + _M_len);
+ std::__detail::__return_temporary_buffer(_M_buffer, _M_len);
+      }
+
+    private:
+
+      _Temporary_buffer(const _Temporary_buffer&);
+
+      void
+      operator=(const _Temporary_buffer&);
+    };
+
+
+  template<bool>
+    struct __uninitialized_construct_buf_dispatch
+    {
+      template<typename _Pointer, typename _ForwardIterator>
+        static void
+        __ucr(_Pointer __first, _Pointer __last,
+       _ForwardIterator __seed)
+        {
+   if (__first == __last)
+     return;
+
+   _Pointer __cur = __first;
+   try
+     {
+       std::_Construct(std::__addressof(*__first),
+         std::move(*__seed));
+       _Pointer __prev = __cur;
+       ++__cur;
+       for(; __cur != __last; ++__cur, ++__prev)
+  std::_Construct(std::__addressof(*__cur),
+    std::move(*__prev));
+       *__seed = std::move(*__prev);
+     }
+   catch(...)
+     {
+       std::_Destroy(__first, __cur);
+       throw;
+     }
+ }
+    };
+
+  template<>
+    struct __uninitialized_construct_buf_dispatch<true>
+    {
+      template<typename _Pointer, typename _ForwardIterator>
+        static void
+        __ucr(_Pointer, _Pointer, _ForwardIterator) { }
+    };
+# 247 "C:/mingw64/include/c++/13.1.0/bits/stl_tempbuf.h" 3
+  template<typename _Pointer, typename _ForwardIterator>
+    inline void
+    __uninitialized_construct_buf(_Pointer __first, _Pointer __last,
+      _ForwardIterator __seed)
+    {
+      typedef typename std::iterator_traits<_Pointer>::value_type
+ _ValueType;
+
+      std::__uninitialized_construct_buf_dispatch<
+        __has_trivial_constructor(_ValueType)>::
+   __ucr(__first, __last, __seed);
+    }
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+  template<typename _ForwardIterator, typename _Tp>
+    _Temporary_buffer<_ForwardIterator, _Tp>::
+    _Temporary_buffer(_ForwardIterator __seed, size_type __original_len)
+    : _M_original_len(__original_len), _M_len(0), _M_buffer(0)
+    {
+      std::pair<pointer, size_type> __p(
+  std::get_temporary_buffer<value_type>(_M_original_len));
+
+      if (__p.first)
+ {
+   try
+     {
+       std::__uninitialized_construct_buf(__p.first, __p.first + __p.second,
+       __seed);
+       _M_buffer = __p.first;
+       _M_len = __p.second;
+     }
+   catch(...)
+     {
+       std::__detail::__return_temporary_buffer(__p.first, __p.second);
+       throw;
+     }
+ }
+    }
+#pragma GCC diagnostic pop
+
+
+}
+# 70 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 2 3
+
+# 1 "C:/mingw64/include/c++/13.1.0/cstdlib" 1 3
+# 39 "C:/mingw64/include/c++/13.1.0/cstdlib" 3
+       
+# 40 "C:/mingw64/include/c++/13.1.0/cstdlib" 3
+# 72 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 2 3
+
+
+
+
+
+namespace std
+{
+
+
+
+  template<typename _Iterator, typename _Compare>
+   
+    void
+    __move_median_to_first(_Iterator __result,_Iterator __a, _Iterator __b,
+      _Iterator __c, _Compare __comp)
+    {
+      if (__comp(__a, __b))
+ {
+   if (__comp(__b, __c))
+     std::iter_swap(__result, __b);
+   else if (__comp(__a, __c))
+     std::iter_swap(__result, __c);
+   else
+     std::iter_swap(__result, __a);
+ }
+      else if (__comp(__a, __c))
+ std::iter_swap(__result, __a);
+      else if (__comp(__b, __c))
+ std::iter_swap(__result, __c);
+      else
+ std::iter_swap(__result, __b);
+    }
+
+
+  template<typename _InputIterator, typename _Predicate>
+   
+    inline _InputIterator
+    __find_if_not(_InputIterator __first, _InputIterator __last,
+    _Predicate __pred)
+    {
+      return std::__find_if(__first, __last,
+       __gnu_cxx::__ops::__negate(__pred),
+       std::__iterator_category(__first));
+    }
+
+
+
+
+  template<typename _InputIterator, typename _Predicate, typename _Distance>
+   
+    _InputIterator
+    __find_if_not_n(_InputIterator __first, _Distance& __len, _Predicate __pred)
+    {
+      for (; __len; --__len, (void) ++__first)
+ if (!__pred(__first))
+   break;
+      return __first;
+    }
+# 144 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator1, typename _ForwardIterator2,
+    typename _BinaryPredicate>
+   
+    _ForwardIterator1
+    __search(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
+      _ForwardIterator2 __first2, _ForwardIterator2 __last2,
+      _BinaryPredicate __predicate)
+    {
+
+      if (__first1 == __last1 || __first2 == __last2)
+ return __first1;
+
+
+      _ForwardIterator2 __p1(__first2);
+      if (++__p1 == __last2)
+ return std::__find_if(__first1, __last1,
+  __gnu_cxx::__ops::__iter_comp_iter(__predicate, __first2));
+
+
+      _ForwardIterator1 __current = __first1;
+
+      for (;;)
+ {
+   __first1 =
+     std::__find_if(__first1, __last1,
+  __gnu_cxx::__ops::__iter_comp_iter(__predicate, __first2));
+
+   if (__first1 == __last1)
+     return __last1;
+
+   _ForwardIterator2 __p = __p1;
+   __current = __first1;
+   if (++__current == __last1)
+     return __last1;
+
+   while (__predicate(__current, __p))
+     {
+       if (++__p == __last2)
+  return __first1;
+       if (++__current == __last1)
+  return __last1;
+     }
+   ++__first1;
+ }
+      return __first1;
+    }
+
+
+
+
+
+
+  template<typename _ForwardIterator, typename _Integer,
+    typename _UnaryPredicate>
+   
+    _ForwardIterator
+    __search_n_aux(_ForwardIterator __first, _ForwardIterator __last,
+     _Integer __count, _UnaryPredicate __unary_pred,
+     std::forward_iterator_tag)
+    {
+      __first = std::__find_if(__first, __last, __unary_pred);
+      while (__first != __last)
+ {
+   typename iterator_traits<_ForwardIterator>::difference_type
+     __n = __count;
+   _ForwardIterator __i = __first;
+   ++__i;
+   while (__i != __last && __n != 1 && __unary_pred(__i))
+     {
+       ++__i;
+       --__n;
+     }
+   if (__n == 1)
+     return __first;
+   if (__i == __last)
+     return __last;
+   __first = std::__find_if(++__i, __last, __unary_pred);
+ }
+      return __last;
+    }
+
+
+
+
+
+  template<typename _RandomAccessIter, typename _Integer,
+    typename _UnaryPredicate>
+   
+    _RandomAccessIter
+    __search_n_aux(_RandomAccessIter __first, _RandomAccessIter __last,
+     _Integer __count, _UnaryPredicate __unary_pred,
+     std::random_access_iterator_tag)
+    {
+      typedef typename std::iterator_traits<_RandomAccessIter>::difference_type
+ _DistanceType;
+
+      _DistanceType __tailSize = __last - __first;
+      _DistanceType __remainder = __count;
+
+      while (__remainder <= __tailSize)
+ {
+   __first += __remainder;
+   __tailSize -= __remainder;
+
+
+   _RandomAccessIter __backTrack = __first;
+   while (__unary_pred(--__backTrack))
+     {
+       if (--__remainder == 0)
+  return (__first - __count);
+     }
+   __remainder = __count + 1 - (__first - __backTrack);
+ }
+      return __last;
+    }
+
+  template<typename _ForwardIterator, typename _Integer,
+    typename _UnaryPredicate>
+   
+    _ForwardIterator
+    __search_n(_ForwardIterator __first, _ForwardIterator __last,
+        _Integer __count,
+        _UnaryPredicate __unary_pred)
+    {
+      if (__count <= 0)
+ return __first;
+
+      if (__count == 1)
+ return std::__find_if(__first, __last, __unary_pred);
+
+      return std::__search_n_aux(__first, __last, __count, __unary_pred,
+     std::__iterator_category(__first));
+    }
+
+
+  template<typename _ForwardIterator1, typename _ForwardIterator2,
+    typename _BinaryPredicate>
+   
+    _ForwardIterator1
+    __find_end(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
+        _ForwardIterator2 __first2, _ForwardIterator2 __last2,
+        forward_iterator_tag, forward_iterator_tag,
+        _BinaryPredicate __comp)
+    {
+      if (__first2 == __last2)
+ return __last1;
+
+      _ForwardIterator1 __result = __last1;
+      while (1)
+ {
+   _ForwardIterator1 __new_result
+     = std::__search(__first1, __last1, __first2, __last2, __comp);
+   if (__new_result == __last1)
+     return __result;
+   else
+     {
+       __result = __new_result;
+       __first1 = __new_result;
+       ++__first1;
+     }
+ }
+    }
+
+
+  template<typename _BidirectionalIterator1, typename _BidirectionalIterator2,
+    typename _BinaryPredicate>
+   
+    _BidirectionalIterator1
+    __find_end(_BidirectionalIterator1 __first1,
+        _BidirectionalIterator1 __last1,
+        _BidirectionalIterator2 __first2,
+        _BidirectionalIterator2 __last2,
+        bidirectional_iterator_tag, bidirectional_iterator_tag,
+        _BinaryPredicate __comp)
+    {
+
+     
+
+     
+
+
+      typedef reverse_iterator<_BidirectionalIterator1> _RevIterator1;
+      typedef reverse_iterator<_BidirectionalIterator2> _RevIterator2;
+
+      _RevIterator1 __rlast1(__first1);
+      _RevIterator2 __rlast2(__first2);
+      _RevIterator1 __rresult = std::__search(_RevIterator1(__last1), __rlast1,
+           _RevIterator2(__last2), __rlast2,
+           __comp);
+
+      if (__rresult == __rlast1)
+ return __last1;
+      else
+ {
+   _BidirectionalIterator1 __result = __rresult.base();
+   std::advance(__result, -std::distance(__first2, __last2));
+   return __result;
+ }
+    }
+# 370 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator1, typename _ForwardIterator2>
+   
+    inline _ForwardIterator1
+    find_end(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
+      _ForwardIterator2 __first2, _ForwardIterator2 __last2)
+    {
+
+     
+     
+     
+
+
+      ;
+      ;
+
+      return std::__find_end(__first1, __last1, __first2, __last2,
+        std::__iterator_category(__first1),
+        std::__iterator_category(__first2),
+        __gnu_cxx::__ops::__iter_equal_to_iter());
+    }
+# 419 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator1, typename _ForwardIterator2,
+    typename _BinaryPredicate>
+   
+    inline _ForwardIterator1
+    find_end(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
+      _ForwardIterator2 __first2, _ForwardIterator2 __last2,
+      _BinaryPredicate __comp)
+    {
+
+     
+     
+     
+
+
+      ;
+      ;
+
+      return std::__find_end(__first1, __last1, __first2, __last2,
+        std::__iterator_category(__first1),
+        std::__iterator_category(__first2),
+        __gnu_cxx::__ops::__iter_comp_iter(__comp));
+    }
+# 455 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _Predicate>
+   
+    inline bool
+    all_of(_InputIterator __first, _InputIterator __last, _Predicate __pred)
+    { return __last == std::find_if_not(__first, __last, __pred); }
+# 473 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _Predicate>
+   
+    inline bool
+    none_of(_InputIterator __first, _InputIterator __last, _Predicate __pred)
+    { return __last == std::find_if(__first, __last, __pred); }
+# 492 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _Predicate>
+   
+    inline bool
+    any_of(_InputIterator __first, _InputIterator __last, _Predicate __pred)
+    { return !std::none_of(__first, __last, __pred); }
+# 508 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _Predicate>
+   
+    inline _InputIterator
+    find_if_not(_InputIterator __first, _InputIterator __last,
+  _Predicate __pred)
+    {
+
+     
+     
+
+      ;
+      return std::__find_if_not(__first, __last,
+    __gnu_cxx::__ops::__pred_iter(__pred));
+    }
+# 533 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _Predicate>
+   
+    inline bool
+    is_partitioned(_InputIterator __first, _InputIterator __last,
+     _Predicate __pred)
+    {
+      __first = std::find_if_not(__first, __last, __pred);
+      if (__first == __last)
+ return true;
+      ++__first;
+      return std::none_of(__first, __last, __pred);
+    }
+# 555 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Predicate>
+   
+    _ForwardIterator
+    partition_point(_ForwardIterator __first, _ForwardIterator __last,
+      _Predicate __pred)
+    {
+
+     
+     
+
+
+
+      ;
+
+      typedef typename iterator_traits<_ForwardIterator>::difference_type
+ _DistanceType;
+
+      _DistanceType __len = std::distance(__first, __last);
+
+      while (__len > 0)
+ {
+   _DistanceType __half = __len >> 1;
+   _ForwardIterator __middle = __first;
+   std::advance(__middle, __half);
+   if (__pred(*__middle))
+     {
+       __first = __middle;
+       ++__first;
+       __len = __len - __half - 1;
+     }
+   else
+     __len = __half;
+ }
+      return __first;
+    }
+
+
+  template<typename _InputIterator, typename _OutputIterator,
+    typename _Predicate>
+   
+    _OutputIterator
+    __remove_copy_if(_InputIterator __first, _InputIterator __last,
+       _OutputIterator __result, _Predicate __pred)
+    {
+      for (; __first != __last; ++__first)
+ if (!__pred(__first))
+   {
+     *__result = *__first;
+     ++__result;
+   }
+      return __result;
+    }
+# 622 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _OutputIterator, typename _Tp>
+   
+    inline _OutputIterator
+    remove_copy(_InputIterator __first, _InputIterator __last,
+  _OutputIterator __result, const _Tp& __value)
+    {
+
+     
+     
+
+     
+
+      ;
+
+      return std::__remove_copy_if(__first, __last, __result,
+ __gnu_cxx::__ops::__iter_equals_val(__value));
+    }
+# 655 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _OutputIterator,
+    typename _Predicate>
+   
+    inline _OutputIterator
+    remove_copy_if(_InputIterator __first, _InputIterator __last,
+     _OutputIterator __result, _Predicate __pred)
+    {
+
+     
+     
+
+     
+
+      ;
+
+      return std::__remove_copy_if(__first, __last, __result,
+       __gnu_cxx::__ops::__pred_iter(__pred));
+    }
+# 690 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _OutputIterator,
+    typename _Predicate>
+   
+    _OutputIterator
+    copy_if(_InputIterator __first, _InputIterator __last,
+     _OutputIterator __result, _Predicate __pred)
+    {
+
+     
+     
+
+     
+
+      ;
+
+      for (; __first != __last; ++__first)
+ if (__pred(*__first))
+   {
+     *__result = *__first;
+     ++__result;
+   }
+      return __result;
+    }
+
+  template<typename _InputIterator, typename _Size, typename _OutputIterator>
+   
+    _OutputIterator
+    __copy_n(_InputIterator __first, _Size __n,
+      _OutputIterator __result, input_iterator_tag)
+    {
+      return std::__niter_wrap(__result,
+          __copy_n_a(__first, __n,
+       std::__niter_base(__result), true));
+    }
+
+  template<typename _RandomAccessIterator, typename _Size,
+    typename _OutputIterator>
+   
+    inline _OutputIterator
+    __copy_n(_RandomAccessIterator __first, _Size __n,
+      _OutputIterator __result, random_access_iterator_tag)
+    { return std::copy(__first, __first + __n, __result); }
+# 746 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _Size, typename _OutputIterator>
+   
+    inline _OutputIterator
+    copy_n(_InputIterator __first, _Size __n, _OutputIterator __result)
+    {
+
+     
+     
+
+
+      const auto __n2 = std::__size_to_integer(__n);
+      if (__n2 <= 0)
+ return __result;
+
+      ;
+      ;
+
+      return std::__copy_n(__first, __n2, __result,
+      std::__iterator_category(__first));
+    }
+# 782 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _OutputIterator1,
+    typename _OutputIterator2, typename _Predicate>
+   
+    pair<_OutputIterator1, _OutputIterator2>
+    partition_copy(_InputIterator __first, _InputIterator __last,
+     _OutputIterator1 __out_true, _OutputIterator2 __out_false,
+     _Predicate __pred)
+    {
+
+     
+     
+
+     
+
+     
+
+      ;
+
+      for (; __first != __last; ++__first)
+ if (__pred(*__first))
+   {
+     *__out_true = *__first;
+     ++__out_true;
+   }
+ else
+   {
+     *__out_false = *__first;
+     ++__out_false;
+   }
+
+      return pair<_OutputIterator1, _OutputIterator2>(__out_true, __out_false);
+    }
+# 833 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Tp>
+   
+    inline _ForwardIterator
+    remove(_ForwardIterator __first, _ForwardIterator __last,
+    const _Tp& __value)
+    {
+
+     
+
+     
+
+      ;
+
+      return std::__remove_if(__first, __last,
+  __gnu_cxx::__ops::__iter_equals_val(__value));
+    }
+# 867 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Predicate>
+   
+    inline _ForwardIterator
+    remove_if(_ForwardIterator __first, _ForwardIterator __last,
+       _Predicate __pred)
+    {
+
+     
+
+     
+
+      ;
+
+      return std::__remove_if(__first, __last,
+         __gnu_cxx::__ops::__pred_iter(__pred));
+    }
+
+  template<typename _ForwardIterator, typename _BinaryPredicate>
+   
+    _ForwardIterator
+    __adjacent_find(_ForwardIterator __first, _ForwardIterator __last,
+      _BinaryPredicate __binary_pred)
+    {
+      if (__first == __last)
+ return __last;
+      _ForwardIterator __next = __first;
+      while (++__next != __last)
+ {
+   if (__binary_pred(__first, __next))
+     return __first;
+   __first = __next;
+ }
+      return __last;
+    }
+
+  template<typename _ForwardIterator, typename _BinaryPredicate>
+   
+    _ForwardIterator
+    __unique(_ForwardIterator __first, _ForwardIterator __last,
+      _BinaryPredicate __binary_pred)
+    {
+
+      __first = std::__adjacent_find(__first, __last, __binary_pred);
+      if (__first == __last)
+ return __last;
+
+
+      _ForwardIterator __dest = __first;
+      ++__first;
+      while (++__first != __last)
+ if (!__binary_pred(__dest, __first))
+   *++__dest = std::move(*__first);
+      return ++__dest;
+    }
+# 936 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator>
+   
+    inline _ForwardIterator
+    unique(_ForwardIterator __first, _ForwardIterator __last)
+    {
+
+     
+
+     
+
+      ;
+
+      return std::__unique(__first, __last,
+      __gnu_cxx::__ops::__iter_equal_to_iter());
+    }
+# 967 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _BinaryPredicate>
+   
+    inline _ForwardIterator
+    unique(_ForwardIterator __first, _ForwardIterator __last,
+    _BinaryPredicate __binary_pred)
+    {
+
+     
+
+     
+
+
+      ;
+
+      return std::__unique(__first, __last,
+      __gnu_cxx::__ops::__iter_comp_iter(__binary_pred));
+    }
+
+
+
+
+
+
+
+  template<typename _ForwardIterator, typename _OutputIterator,
+    typename _BinaryPredicate>
+   
+    _OutputIterator
+    __unique_copy(_ForwardIterator __first, _ForwardIterator __last,
+    _OutputIterator __result, _BinaryPredicate __binary_pred,
+    forward_iterator_tag, output_iterator_tag)
+    {
+
+     
+
+
+
+      _ForwardIterator __next = __first;
+      *__result = *__first;
+      while (++__next != __last)
+ if (!__binary_pred(__first, __next))
+   {
+     __first = __next;
+     *++__result = *__first;
+   }
+      return ++__result;
+    }
+
+
+
+
+
+
+
+  template<typename _InputIterator, typename _OutputIterator,
+    typename _BinaryPredicate>
+   
+    _OutputIterator
+    __unique_copy(_InputIterator __first, _InputIterator __last,
+    _OutputIterator __result, _BinaryPredicate __binary_pred,
+    input_iterator_tag, output_iterator_tag)
+    {
+
+     
+
+
+
+      typename iterator_traits<_InputIterator>::value_type __value = *__first;
+      __decltype(__gnu_cxx::__ops::__iter_comp_val(__binary_pred))
+ __rebound_pred
+ = __gnu_cxx::__ops::__iter_comp_val(__binary_pred);
+      *__result = __value;
+      while (++__first != __last)
+ if (!__rebound_pred(__first, __value))
+   {
+     __value = *__first;
+     *++__result = __value;
+   }
+      return ++__result;
+    }
+
+
+
+
+
+
+
+  template<typename _InputIterator, typename _ForwardIterator,
+    typename _BinaryPredicate>
+   
+    _ForwardIterator
+    __unique_copy(_InputIterator __first, _InputIterator __last,
+    _ForwardIterator __result, _BinaryPredicate __binary_pred,
+    input_iterator_tag, forward_iterator_tag)
+    {
+
+     
+
+
+      *__result = *__first;
+      while (++__first != __last)
+ if (!__binary_pred(__result, __first))
+   *++__result = *__first;
+      return ++__result;
+    }
+
+
+
+
+
+
+  template<typename _BidirectionalIterator>
+   
+    void
+    __reverse(_BidirectionalIterator __first, _BidirectionalIterator __last,
+       bidirectional_iterator_tag)
+    {
+      while (true)
+ if (__first == __last || __first == --__last)
+   return;
+ else
+   {
+     std::iter_swap(__first, __last);
+     ++__first;
+   }
+    }
+
+
+
+
+
+
+  template<typename _RandomAccessIterator>
+   
+    void
+    __reverse(_RandomAccessIterator __first, _RandomAccessIterator __last,
+       random_access_iterator_tag)
+    {
+      if (__first == __last)
+ return;
+      --__last;
+      while (__first < __last)
+ {
+   std::iter_swap(__first, __last);
+   ++__first;
+   --__last;
+ }
+    }
+# 1128 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _BidirectionalIterator>
+   
+    inline void
+    reverse(_BidirectionalIterator __first, _BidirectionalIterator __last)
+    {
+
+     
+
+      ;
+      std::__reverse(__first, __last, std::__iterator_category(__first));
+    }
+# 1156 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _BidirectionalIterator, typename _OutputIterator>
+   
+    _OutputIterator
+    reverse_copy(_BidirectionalIterator __first, _BidirectionalIterator __last,
+   _OutputIterator __result)
+    {
+
+     
+
+     
+
+      ;
+
+      while (__first != __last)
+ {
+   --__last;
+   *__result = *__last;
+   ++__result;
+ }
+      return __result;
+    }
+
+
+
+
+
+  template<typename _EuclideanRingElement>
+   
+    _EuclideanRingElement
+    __gcd(_EuclideanRingElement __m, _EuclideanRingElement __n)
+    {
+      while (__n != 0)
+ {
+   _EuclideanRingElement __t = __m % __n;
+   __m = __n;
+   __n = __t;
+ }
+      return __m;
+    }
+
+inline namespace _V2 {
+
+
+  template<typename _ForwardIterator>
+   
+    _ForwardIterator
+    __rotate(_ForwardIterator __first,
+      _ForwardIterator __middle,
+      _ForwardIterator __last,
+      forward_iterator_tag)
+    {
+      if (__first == __middle)
+ return __last;
+      else if (__last == __middle)
+ return __first;
+
+      _ForwardIterator __first2 = __middle;
+      do
+ {
+   std::iter_swap(__first, __first2);
+   ++__first;
+   ++__first2;
+   if (__first == __middle)
+     __middle = __first2;
+ }
+      while (__first2 != __last);
+
+      _ForwardIterator __ret = __first;
+
+      __first2 = __middle;
+
+      while (__first2 != __last)
+ {
+   std::iter_swap(__first, __first2);
+   ++__first;
+   ++__first2;
+   if (__first == __middle)
+     __middle = __first2;
+   else if (__first2 == __last)
+     __first2 = __middle;
+ }
+      return __ret;
+    }
+
+
+  template<typename _BidirectionalIterator>
+   
+    _BidirectionalIterator
+    __rotate(_BidirectionalIterator __first,
+      _BidirectionalIterator __middle,
+      _BidirectionalIterator __last,
+       bidirectional_iterator_tag)
+    {
+
+     
+
+
+      if (__first == __middle)
+ return __last;
+      else if (__last == __middle)
+ return __first;
+
+      std::__reverse(__first, __middle, bidirectional_iterator_tag());
+      std::__reverse(__middle, __last, bidirectional_iterator_tag());
+
+      while (__first != __middle && __middle != __last)
+ {
+   std::iter_swap(__first, --__last);
+   ++__first;
+ }
+
+      if (__first == __middle)
+ {
+   std::__reverse(__middle, __last, bidirectional_iterator_tag());
+   return __last;
+ }
+      else
+ {
+   std::__reverse(__first, __middle, bidirectional_iterator_tag());
+   return __first;
+ }
+    }
+
+
+  template<typename _RandomAccessIterator>
+   
+    _RandomAccessIterator
+    __rotate(_RandomAccessIterator __first,
+      _RandomAccessIterator __middle,
+      _RandomAccessIterator __last,
+      random_access_iterator_tag)
+    {
+
+     
+
+
+      if (__first == __middle)
+ return __last;
+      else if (__last == __middle)
+ return __first;
+
+      typedef typename iterator_traits<_RandomAccessIterator>::difference_type
+ _Distance;
+      typedef typename iterator_traits<_RandomAccessIterator>::value_type
+ _ValueType;
+
+      _Distance __n = __last - __first;
+      _Distance __k = __middle - __first;
+
+      if (__k == __n - __k)
+ {
+   std::swap_ranges(__first, __middle, __middle);
+   return __middle;
+ }
+
+      _RandomAccessIterator __p = __first;
+      _RandomAccessIterator __ret = __first + (__last - __middle);
+
+      for (;;)
+ {
+   if (__k < __n - __k)
+     {
+       if (__is_pod(_ValueType) && __k == 1)
+  {
+    _ValueType __t = std::move(*__p);
+    std::move(__p + 1, __p + __n, __p);
+    *(__p + __n - 1) = std::move(__t);
+    return __ret;
+  }
+       _RandomAccessIterator __q = __p + __k;
+       for (_Distance __i = 0; __i < __n - __k; ++ __i)
+  {
+    std::iter_swap(__p, __q);
+    ++__p;
+    ++__q;
+  }
+       __n %= __k;
+       if (__n == 0)
+  return __ret;
+       std::swap(__n, __k);
+       __k = __n - __k;
+     }
+   else
+     {
+       __k = __n - __k;
+       if (__is_pod(_ValueType) && __k == 1)
+  {
+    _ValueType __t = std::move(*(__p + __n - 1));
+    std::move_backward(__p, __p + __n - 1, __p + __n);
+    *__p = std::move(__t);
+    return __ret;
+  }
+       _RandomAccessIterator __q = __p + __n;
+       __p = __q - __k;
+       for (_Distance __i = 0; __i < __n - __k; ++ __i)
+  {
+    --__p;
+    --__q;
+    std::iter_swap(__p, __q);
+  }
+       __n %= __k;
+       if (__n == 0)
+  return __ret;
+       std::swap(__n, __k);
+     }
+ }
+    }
+# 1387 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator>
+   
+    inline _ForwardIterator
+    rotate(_ForwardIterator __first, _ForwardIterator __middle,
+    _ForwardIterator __last)
+    {
+
+     
+
+      ;
+      ;
+
+      return std::__rotate(__first, __middle, __last,
+      std::__iterator_category(__first));
+    }
+
+}
+# 1425 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _OutputIterator>
+   
+    inline _OutputIterator
+    rotate_copy(_ForwardIterator __first, _ForwardIterator __middle,
+  _ForwardIterator __last, _OutputIterator __result)
+    {
+
+     
+     
+
+      ;
+      ;
+
+      return std::copy(__first, __middle,
+         std::copy(__middle, __last, __result));
+    }
+
+
+  template<typename _ForwardIterator, typename _Predicate>
+   
+    _ForwardIterator
+    __partition(_ForwardIterator __first, _ForwardIterator __last,
+  _Predicate __pred, forward_iterator_tag)
+    {
+      if (__first == __last)
+ return __first;
+
+      while (__pred(*__first))
+ if (++__first == __last)
+   return __first;
+
+      _ForwardIterator __next = __first;
+
+      while (++__next != __last)
+ if (__pred(*__next))
+   {
+     std::iter_swap(__first, __next);
+     ++__first;
+   }
+
+      return __first;
+    }
+
+
+  template<typename _BidirectionalIterator, typename _Predicate>
+   
+    _BidirectionalIterator
+    __partition(_BidirectionalIterator __first, _BidirectionalIterator __last,
+  _Predicate __pred, bidirectional_iterator_tag)
+    {
+      while (true)
+ {
+   while (true)
+     if (__first == __last)
+       return __first;
+     else if (__pred(*__first))
+       ++__first;
+     else
+       break;
+   --__last;
+   while (true)
+     if (__first == __last)
+       return __first;
+     else if (!bool(__pred(*__last)))
+       --__last;
+     else
+       break;
+   std::iter_swap(__first, __last);
+   ++__first;
+ }
+    }
+# 1506 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Pointer, typename _Predicate,
+    typename _Distance>
+    _ForwardIterator
+    __stable_partition_adaptive(_ForwardIterator __first,
+    _ForwardIterator __last,
+    _Predicate __pred, _Distance __len,
+    _Pointer __buffer,
+    _Distance __buffer_size)
+    {
+      if (__len == 1)
+ return __first;
+
+      if (__len <= __buffer_size)
+ {
+   _ForwardIterator __result1 = __first;
+   _Pointer __result2 = __buffer;
+
+
+
+
+   *__result2 = std::move(*__first);
+   ++__result2;
+   ++__first;
+   for (; __first != __last; ++__first)
+     if (__pred(__first))
+       {
+  *__result1 = std::move(*__first);
+  ++__result1;
+       }
+     else
+       {
+  *__result2 = std::move(*__first);
+  ++__result2;
+       }
+
+   std::move(__buffer, __result2, __result1);
+   return __result1;
+ }
+
+      _ForwardIterator __middle = __first;
+      std::advance(__middle, __len / 2);
+      _ForwardIterator __left_split =
+ std::__stable_partition_adaptive(__first, __middle, __pred,
+      __len / 2, __buffer,
+      __buffer_size);
+
+
+
+      _Distance __right_len = __len - __len / 2;
+      _ForwardIterator __right_split =
+ std::__find_if_not_n(__middle, __right_len, __pred);
+
+      if (__right_len)
+ __right_split =
+   std::__stable_partition_adaptive(__right_split, __last, __pred,
+        __right_len,
+        __buffer, __buffer_size);
+
+      return std::rotate(__left_split, __middle, __right_split);
+    }
+
+  template<typename _ForwardIterator, typename _Predicate>
+    _ForwardIterator
+    __stable_partition(_ForwardIterator __first, _ForwardIterator __last,
+         _Predicate __pred)
+    {
+      __first = std::__find_if_not(__first, __last, __pred);
+
+      if (__first == __last)
+ return __first;
+
+      typedef typename iterator_traits<_ForwardIterator>::value_type
+ _ValueType;
+      typedef typename iterator_traits<_ForwardIterator>::difference_type
+ _DistanceType;
+
+      _Temporary_buffer<_ForwardIterator, _ValueType>
+ __buf(__first, std::distance(__first, __last));
+      return
+ std::__stable_partition_adaptive(__first, __last, __pred,
+      _DistanceType(__buf.requested_size()),
+      __buf.begin(),
+      _DistanceType(__buf.size()));
+    }
+# 1608 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Predicate>
+    inline _ForwardIterator
+    stable_partition(_ForwardIterator __first, _ForwardIterator __last,
+       _Predicate __pred)
+    {
+
+     
+
+     
+
+      ;
+
+      return std::__stable_partition(__first, __last,
+         __gnu_cxx::__ops::__pred_iter(__pred));
+    }
+
+
+
+
+
+  template<typename _RandomAccessIterator, typename _Compare>
+   
+    void
+    __heap_select(_RandomAccessIterator __first,
+    _RandomAccessIterator __middle,
+    _RandomAccessIterator __last, _Compare __comp)
+    {
+      std::__make_heap(__first, __middle, __comp);
+      for (_RandomAccessIterator __i = __middle; __i < __last; ++__i)
+ if (__comp(__i, __first))
+   std::__pop_heap(__first, __middle, __i, __comp);
+    }
+
+
+
+  template<typename _InputIterator, typename _RandomAccessIterator,
+    typename _Compare>
+   
+    _RandomAccessIterator
+    __partial_sort_copy(_InputIterator __first, _InputIterator __last,
+   _RandomAccessIterator __result_first,
+   _RandomAccessIterator __result_last,
+   _Compare __comp)
+    {
+      typedef typename iterator_traits<_InputIterator>::value_type
+ _InputValueType;
+      typedef iterator_traits<_RandomAccessIterator> _RItTraits;
+      typedef typename _RItTraits::difference_type _DistanceType;
+
+      if (__result_first == __result_last)
+ return __result_last;
+      _RandomAccessIterator __result_real_last = __result_first;
+      while (__first != __last && __result_real_last != __result_last)
+ {
+   *__result_real_last = *__first;
+   ++__result_real_last;
+   ++__first;
+ }
+
+      std::__make_heap(__result_first, __result_real_last, __comp);
+      while (__first != __last)
+ {
+   if (__comp(__first, __result_first))
+     std::__adjust_heap(__result_first, _DistanceType(0),
+          _DistanceType(__result_real_last
+          - __result_first),
+          _InputValueType(*__first), __comp);
+   ++__first;
+ }
+      std::__sort_heap(__result_first, __result_real_last, __comp);
+      return __result_real_last;
+    }
+# 1701 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _RandomAccessIterator>
+   
+    inline _RandomAccessIterator
+    partial_sort_copy(_InputIterator __first, _InputIterator __last,
+        _RandomAccessIterator __result_first,
+        _RandomAccessIterator __result_last)
+    {
+# 1716 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+     
+     
+
+     
+
+     
+      ;
+      ;
+      ;
+
+      return std::__partial_sort_copy(__first, __last,
+          __result_first, __result_last,
+          __gnu_cxx::__ops::__iter_less_iter());
+    }
+# 1751 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _RandomAccessIterator,
+    typename _Compare>
+   
+    inline _RandomAccessIterator
+    partial_sort_copy(_InputIterator __first, _InputIterator __last,
+        _RandomAccessIterator __result_first,
+        _RandomAccessIterator __result_last,
+        _Compare __comp)
+    {
+# 1768 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+     
+     
+
+     
+
+     
+
+     
+
+      ;
+      ;
+      ;
+
+      return std::__partial_sort_copy(__first, __last,
+          __result_first, __result_last,
+    __gnu_cxx::__ops::__iter_comp_iter(__comp));
+    }
+
+
+
+
+  template<typename _RandomAccessIterator, typename _Compare>
+   
+    void
+    __unguarded_linear_insert(_RandomAccessIterator __last,
+         _Compare __comp)
+    {
+      typename iterator_traits<_RandomAccessIterator>::value_type
+ __val = std::move(*__last);
+      _RandomAccessIterator __next = __last;
+      --__next;
+      while (__comp(__val, __next))
+ {
+   *__last = std::move(*__next);
+   __last = __next;
+   --__next;
+ }
+      *__last = std::move(__val);
+    }
+
+
+  template<typename _RandomAccessIterator, typename _Compare>
+   
+    void
+    __insertion_sort(_RandomAccessIterator __first,
+       _RandomAccessIterator __last, _Compare __comp)
+    {
+      if (__first == __last) return;
+
+      for (_RandomAccessIterator __i = __first + 1; __i != __last; ++__i)
+ {
+   if (__comp(__i, __first))
+     {
+       typename iterator_traits<_RandomAccessIterator>::value_type
+  __val = std::move(*__i);
+       std::move_backward(__first, __i, __i + 1);
+       *__first = std::move(__val);
+     }
+   else
+     std::__unguarded_linear_insert(__i,
+    __gnu_cxx::__ops::__val_comp_iter(__comp));
+ }
+    }
+
+
+  template<typename _RandomAccessIterator, typename _Compare>
+   
+    inline void
+    __unguarded_insertion_sort(_RandomAccessIterator __first,
+          _RandomAccessIterator __last, _Compare __comp)
+    {
+      for (_RandomAccessIterator __i = __first; __i != __last; ++__i)
+ std::__unguarded_linear_insert(__i,
+    __gnu_cxx::__ops::__val_comp_iter(__comp));
+    }
+
+
+
+
+
+  enum { _S_threshold = 16 };
+
+
+  template<typename _RandomAccessIterator, typename _Compare>
+   
+    void
+    __final_insertion_sort(_RandomAccessIterator __first,
+      _RandomAccessIterator __last, _Compare __comp)
+    {
+      if (__last - __first > int(_S_threshold))
+ {
+   std::__insertion_sort(__first, __first + int(_S_threshold), __comp);
+   std::__unguarded_insertion_sort(__first + int(_S_threshold), __last,
+       __comp);
+ }
+      else
+ std::__insertion_sort(__first, __last, __comp);
+    }
+
+
+  template<typename _RandomAccessIterator, typename _Compare>
+   
+    _RandomAccessIterator
+    __unguarded_partition(_RandomAccessIterator __first,
+     _RandomAccessIterator __last,
+     _RandomAccessIterator __pivot, _Compare __comp)
+    {
+      while (true)
+ {
+   while (__comp(__first, __pivot))
+     ++__first;
+   --__last;
+   while (__comp(__pivot, __last))
+     --__last;
+   if (!(__first < __last))
+     return __first;
+   std::iter_swap(__first, __last);
+   ++__first;
+ }
+    }
+
+
+  template<typename _RandomAccessIterator, typename _Compare>
+   
+    inline _RandomAccessIterator
+    __unguarded_partition_pivot(_RandomAccessIterator __first,
+    _RandomAccessIterator __last, _Compare __comp)
+    {
+      _RandomAccessIterator __mid = __first + (__last - __first) / 2;
+      std::__move_median_to_first(__first, __first + 1, __mid, __last - 1,
+      __comp);
+      return std::__unguarded_partition(__first + 1, __last, __first, __comp);
+    }
+
+  template<typename _RandomAccessIterator, typename _Compare>
+   
+    inline void
+    __partial_sort(_RandomAccessIterator __first,
+     _RandomAccessIterator __middle,
+     _RandomAccessIterator __last,
+     _Compare __comp)
+    {
+      std::__heap_select(__first, __middle, __last, __comp);
+      std::__sort_heap(__first, __middle, __comp);
+    }
+
+
+  template<typename _RandomAccessIterator, typename _Size, typename _Compare>
+   
+    void
+    __introsort_loop(_RandomAccessIterator __first,
+       _RandomAccessIterator __last,
+       _Size __depth_limit, _Compare __comp)
+    {
+      while (__last - __first > int(_S_threshold))
+ {
+   if (__depth_limit == 0)
+     {
+       std::__partial_sort(__first, __last, __last, __comp);
+       return;
+     }
+   --__depth_limit;
+   _RandomAccessIterator __cut =
+     std::__unguarded_partition_pivot(__first, __last, __comp);
+   std::__introsort_loop(__cut, __last, __depth_limit, __comp);
+   __last = __cut;
+ }
+    }
+
+
+
+  template<typename _RandomAccessIterator, typename _Compare>
+   
+    inline void
+    __sort(_RandomAccessIterator __first, _RandomAccessIterator __last,
+    _Compare __comp)
+    {
+      if (__first != __last)
+ {
+   std::__introsort_loop(__first, __last,
+    std::__lg(__last - __first) * 2,
+    __comp);
+   std::__final_insertion_sort(__first, __last, __comp);
+ }
+    }
+
+  template<typename _RandomAccessIterator, typename _Size, typename _Compare>
+   
+    void
+    __introselect(_RandomAccessIterator __first, _RandomAccessIterator __nth,
+    _RandomAccessIterator __last, _Size __depth_limit,
+    _Compare __comp)
+    {
+      while (__last - __first > 3)
+ {
+   if (__depth_limit == 0)
+     {
+       std::__heap_select(__first, __nth + 1, __last, __comp);
+
+       std::iter_swap(__first, __nth);
+       return;
+     }
+   --__depth_limit;
+   _RandomAccessIterator __cut =
+     std::__unguarded_partition_pivot(__first, __last, __comp);
+   if (__cut <= __nth)
+     __first = __cut;
+   else
+     __last = __cut;
+ }
+      std::__insertion_sort(__first, __last, __comp);
+    }
+# 2002 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Tp, typename _Compare>
+   
+    inline _ForwardIterator
+    lower_bound(_ForwardIterator __first, _ForwardIterator __last,
+  const _Tp& __val, _Compare __comp)
+    {
+
+     
+     
+
+     
+                    ;
+
+      return std::__lower_bound(__first, __last, __val,
+    __gnu_cxx::__ops::__iter_comp_val(__comp));
+    }
+
+  template<typename _ForwardIterator, typename _Tp, typename _Compare>
+   
+    _ForwardIterator
+    __upper_bound(_ForwardIterator __first, _ForwardIterator __last,
+    const _Tp& __val, _Compare __comp)
+    {
+      typedef typename iterator_traits<_ForwardIterator>::difference_type
+ _DistanceType;
+
+      _DistanceType __len = std::distance(__first, __last);
+
+      while (__len > 0)
+ {
+   _DistanceType __half = __len >> 1;
+   _ForwardIterator __middle = __first;
+   std::advance(__middle, __half);
+   if (__comp(__val, __middle))
+     __len = __half;
+   else
+     {
+       __first = __middle;
+       ++__first;
+       __len = __len - __half - 1;
+     }
+ }
+      return __first;
+    }
+# 2058 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Tp>
+   
+    inline _ForwardIterator
+    upper_bound(_ForwardIterator __first, _ForwardIterator __last,
+  const _Tp& __val)
+    {
+
+     
+     
+
+      ;
+
+      return std::__upper_bound(__first, __last, __val,
+    __gnu_cxx::__ops::__val_less_iter());
+    }
+# 2089 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Tp, typename _Compare>
+   
+    inline _ForwardIterator
+    upper_bound(_ForwardIterator __first, _ForwardIterator __last,
+  const _Tp& __val, _Compare __comp)
+    {
+
+     
+     
+
+     
+                    ;
+
+      return std::__upper_bound(__first, __last, __val,
+    __gnu_cxx::__ops::__val_comp_iter(__comp));
+    }
+
+  template<typename _ForwardIterator, typename _Tp,
+    typename _CompareItTp, typename _CompareTpIt>
+   
+    pair<_ForwardIterator, _ForwardIterator>
+    __equal_range(_ForwardIterator __first, _ForwardIterator __last,
+    const _Tp& __val,
+    _CompareItTp __comp_it_val, _CompareTpIt __comp_val_it)
+    {
+      typedef typename iterator_traits<_ForwardIterator>::difference_type
+ _DistanceType;
+
+      _DistanceType __len = std::distance(__first, __last);
+
+      while (__len > 0)
+ {
+   _DistanceType __half = __len >> 1;
+   _ForwardIterator __middle = __first;
+   std::advance(__middle, __half);
+   if (__comp_it_val(__middle, __val))
+     {
+       __first = __middle;
+       ++__first;
+       __len = __len - __half - 1;
+     }
+   else if (__comp_val_it(__val, __middle))
+     __len = __half;
+   else
+     {
+       _ForwardIterator __left
+  = std::__lower_bound(__first, __middle, __val, __comp_it_val);
+       std::advance(__first, __len);
+       _ForwardIterator __right
+  = std::__upper_bound(++__middle, __first, __val, __comp_val_it);
+       return pair<_ForwardIterator, _ForwardIterator>(__left, __right);
+     }
+ }
+      return pair<_ForwardIterator, _ForwardIterator>(__first, __first);
+    }
+# 2162 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Tp>
+   
+    inline pair<_ForwardIterator, _ForwardIterator>
+    equal_range(_ForwardIterator __first, _ForwardIterator __last,
+  const _Tp& __val)
+    {
+
+     
+     
+
+     
+
+      ;
+      ;
+
+      return std::__equal_range(__first, __last, __val,
+    __gnu_cxx::__ops::__iter_less_val(),
+    __gnu_cxx::__ops::__val_less_iter());
+    }
+# 2199 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Tp, typename _Compare>
+   
+    inline pair<_ForwardIterator, _ForwardIterator>
+    equal_range(_ForwardIterator __first, _ForwardIterator __last,
+  const _Tp& __val, _Compare __comp)
+    {
+
+     
+     
+
+     
+
+     
+                    ;
+     
+                    ;
+
+      return std::__equal_range(__first, __last, __val,
+    __gnu_cxx::__ops::__iter_comp_val(__comp),
+    __gnu_cxx::__ops::__val_comp_iter(__comp));
+    }
+# 2233 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Tp>
+   
+    bool
+    binary_search(_ForwardIterator __first, _ForwardIterator __last,
+    const _Tp& __val)
+    {
+
+     
+     
+
+      ;
+      ;
+
+      _ForwardIterator __i
+ = std::__lower_bound(__first, __last, __val,
+        __gnu_cxx::__ops::__iter_less_val());
+      return __i != __last && !(__val < *__i);
+    }
+# 2267 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Tp, typename _Compare>
+   
+    bool
+    binary_search(_ForwardIterator __first, _ForwardIterator __last,
+    const _Tp& __val, _Compare __comp)
+    {
+
+     
+     
+
+     
+                    ;
+     
+                    ;
+
+      _ForwardIterator __i
+ = std::__lower_bound(__first, __last, __val,
+        __gnu_cxx::__ops::__iter_comp_val(__comp));
+      return __i != __last && !bool(__comp(__val, *__i));
+    }
+
+
+
+
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _OutputIterator, typename _Compare>
+    void
+    __move_merge_adaptive(_InputIterator1 __first1, _InputIterator1 __last1,
+     _InputIterator2 __first2, _InputIterator2 __last2,
+     _OutputIterator __result, _Compare __comp)
+    {
+      while (__first1 != __last1 && __first2 != __last2)
+ {
+   if (__comp(__first2, __first1))
+     {
+       *__result = std::move(*__first2);
+       ++__first2;
+     }
+   else
+     {
+       *__result = std::move(*__first1);
+       ++__first1;
+     }
+   ++__result;
+ }
+      if (__first1 != __last1)
+ std::move(__first1, __last1, __result);
+    }
+
+
+  template<typename _BidirectionalIterator1, typename _BidirectionalIterator2,
+    typename _BidirectionalIterator3, typename _Compare>
+    void
+    __move_merge_adaptive_backward(_BidirectionalIterator1 __first1,
+       _BidirectionalIterator1 __last1,
+       _BidirectionalIterator2 __first2,
+       _BidirectionalIterator2 __last2,
+       _BidirectionalIterator3 __result,
+       _Compare __comp)
+    {
+      if (__first1 == __last1)
+ {
+   std::move_backward(__first2, __last2, __result);
+   return;
+ }
+      else if (__first2 == __last2)
+ return;
+
+      --__last1;
+      --__last2;
+      while (true)
+ {
+   if (__comp(__last2, __last1))
+     {
+       *--__result = std::move(*__last1);
+       if (__first1 == __last1)
+  {
+    std::move_backward(__first2, ++__last2, __result);
+    return;
+  }
+       --__last1;
+     }
+   else
+     {
+       *--__result = std::move(*__last2);
+       if (__first2 == __last2)
+  return;
+       --__last2;
+     }
+ }
+    }
+
+
+  template<typename _BidirectionalIterator1, typename _BidirectionalIterator2,
+    typename _Distance>
+    _BidirectionalIterator1
+    __rotate_adaptive(_BidirectionalIterator1 __first,
+        _BidirectionalIterator1 __middle,
+        _BidirectionalIterator1 __last,
+        _Distance __len1, _Distance __len2,
+        _BidirectionalIterator2 __buffer,
+        _Distance __buffer_size)
+    {
+      _BidirectionalIterator2 __buffer_end;
+      if (__len1 > __len2 && __len2 <= __buffer_size)
+ {
+   if (__len2)
+     {
+       __buffer_end = std::move(__middle, __last, __buffer);
+       std::move_backward(__first, __middle, __last);
+       return std::move(__buffer, __buffer_end, __first);
+     }
+   else
+     return __first;
+ }
+      else if (__len1 <= __buffer_size)
+ {
+   if (__len1)
+     {
+       __buffer_end = std::move(__first, __middle, __buffer);
+       std::move(__middle, __last, __first);
+       return std::move_backward(__buffer, __buffer_end, __last);
+     }
+   else
+     return __last;
+ }
+      else
+ return std::rotate(__first, __middle, __last);
+    }
+
+
+  template<typename _BidirectionalIterator, typename _Distance,
+    typename _Pointer, typename _Compare>
+    void
+    __merge_adaptive(_BidirectionalIterator __first,
+       _BidirectionalIterator __middle,
+       _BidirectionalIterator __last,
+       _Distance __len1, _Distance __len2,
+       _Pointer __buffer, _Compare __comp)
+    {
+      if (__len1 <= __len2)
+ {
+   _Pointer __buffer_end = std::move(__first, __middle, __buffer);
+   std::__move_merge_adaptive(__buffer, __buffer_end, __middle, __last,
+         __first, __comp);
+ }
+      else
+ {
+   _Pointer __buffer_end = std::move(__middle, __last, __buffer);
+   std::__move_merge_adaptive_backward(__first, __middle, __buffer,
+           __buffer_end, __last, __comp);
+ }
+    }
+
+  template<typename _BidirectionalIterator, typename _Distance,
+    typename _Pointer, typename _Compare>
+    void
+    __merge_adaptive_resize(_BidirectionalIterator __first,
+       _BidirectionalIterator __middle,
+       _BidirectionalIterator __last,
+       _Distance __len1, _Distance __len2,
+       _Pointer __buffer, _Distance __buffer_size,
+       _Compare __comp)
+    {
+      if (__len1 <= __buffer_size || __len2 <= __buffer_size)
+ std::__merge_adaptive(__first, __middle, __last,
+         __len1, __len2, __buffer, __comp);
+      else
+ {
+   _BidirectionalIterator __first_cut = __first;
+   _BidirectionalIterator __second_cut = __middle;
+   _Distance __len11 = 0;
+   _Distance __len22 = 0;
+   if (__len1 > __len2)
+     {
+       __len11 = __len1 / 2;
+       std::advance(__first_cut, __len11);
+       __second_cut
+  = std::__lower_bound(__middle, __last, *__first_cut,
+         __gnu_cxx::__ops::__iter_comp_val(__comp));
+       __len22 = std::distance(__middle, __second_cut);
+     }
+   else
+     {
+       __len22 = __len2 / 2;
+       std::advance(__second_cut, __len22);
+       __first_cut
+  = std::__upper_bound(__first, __middle, *__second_cut,
+         __gnu_cxx::__ops::__val_comp_iter(__comp));
+       __len11 = std::distance(__first, __first_cut);
+     }
+
+   _BidirectionalIterator __new_middle
+     = std::__rotate_adaptive(__first_cut, __middle, __second_cut,
+         _Distance(__len1 - __len11), __len22,
+         __buffer, __buffer_size);
+   std::__merge_adaptive_resize(__first, __first_cut, __new_middle,
+           __len11, __len22,
+           __buffer, __buffer_size, __comp);
+   std::__merge_adaptive_resize(__new_middle, __second_cut, __last,
+           _Distance(__len1 - __len11),
+           _Distance(__len2 - __len22),
+           __buffer, __buffer_size, __comp);
+ }
+    }
+
+
+  template<typename _BidirectionalIterator, typename _Distance,
+    typename _Compare>
+    void
+    __merge_without_buffer(_BidirectionalIterator __first,
+      _BidirectionalIterator __middle,
+      _BidirectionalIterator __last,
+      _Distance __len1, _Distance __len2,
+      _Compare __comp)
+    {
+      if (__len1 == 0 || __len2 == 0)
+ return;
+
+      if (__len1 + __len2 == 2)
+ {
+   if (__comp(__middle, __first))
+     std::iter_swap(__first, __middle);
+   return;
+ }
+
+      _BidirectionalIterator __first_cut = __first;
+      _BidirectionalIterator __second_cut = __middle;
+      _Distance __len11 = 0;
+      _Distance __len22 = 0;
+      if (__len1 > __len2)
+ {
+   __len11 = __len1 / 2;
+   std::advance(__first_cut, __len11);
+   __second_cut
+     = std::__lower_bound(__middle, __last, *__first_cut,
+     __gnu_cxx::__ops::__iter_comp_val(__comp));
+   __len22 = std::distance(__middle, __second_cut);
+ }
+      else
+ {
+   __len22 = __len2 / 2;
+   std::advance(__second_cut, __len22);
+   __first_cut
+     = std::__upper_bound(__first, __middle, *__second_cut,
+     __gnu_cxx::__ops::__val_comp_iter(__comp));
+   __len11 = std::distance(__first, __first_cut);
+ }
+
+      _BidirectionalIterator __new_middle
+ = std::rotate(__first_cut, __middle, __second_cut);
+      std::__merge_without_buffer(__first, __first_cut, __new_middle,
+      __len11, __len22, __comp);
+      std::__merge_without_buffer(__new_middle, __second_cut, __last,
+      __len1 - __len11, __len2 - __len22, __comp);
+    }
+
+  template<typename _BidirectionalIterator, typename _Compare>
+    void
+    __inplace_merge(_BidirectionalIterator __first,
+      _BidirectionalIterator __middle,
+      _BidirectionalIterator __last,
+      _Compare __comp)
+    {
+      typedef typename iterator_traits<_BidirectionalIterator>::value_type
+   _ValueType;
+      typedef typename iterator_traits<_BidirectionalIterator>::difference_type
+   _DistanceType;
+
+      if (__first == __middle || __middle == __last)
+ return;
+
+      const _DistanceType __len1 = std::distance(__first, __middle);
+      const _DistanceType __len2 = std::distance(__middle, __last);
+
+
+      typedef _Temporary_buffer<_BidirectionalIterator, _ValueType> _TmpBuf;
+
+
+      _TmpBuf __buf(__first, std::min(__len1, __len2));
+
+      if (__builtin_expect(__buf.size() == __buf.requested_size(), true))
+ std::__merge_adaptive
+   (__first, __middle, __last, __len1, __len2, __buf.begin(), __comp);
+      else if (__builtin_expect(__buf.begin() == 0, false))
+ std::__merge_without_buffer
+   (__first, __middle, __last, __len1, __len2, __comp);
+      else
+ std::__merge_adaptive_resize
+   (__first, __middle, __last, __len1, __len2, __buf.begin(),
+    _DistanceType(__buf.size()), __comp);
+
+
+
+
+    }
+# 2582 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _BidirectionalIterator>
+    inline void
+    inplace_merge(_BidirectionalIterator __first,
+    _BidirectionalIterator __middle,
+    _BidirectionalIterator __last)
+    {
+
+     
+
+     
+
+      ;
+      ;
+      ;
+
+      std::__inplace_merge(__first, __middle, __last,
+      __gnu_cxx::__ops::__iter_less_iter());
+    }
+# 2623 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _BidirectionalIterator, typename _Compare>
+    inline void
+    inplace_merge(_BidirectionalIterator __first,
+    _BidirectionalIterator __middle,
+    _BidirectionalIterator __last,
+    _Compare __comp)
+    {
+
+     
+
+     
+
+
+      ;
+      ;
+      ;
+
+      std::__inplace_merge(__first, __middle, __last,
+      __gnu_cxx::__ops::__iter_comp_iter(__comp));
+    }
+
+
+
+  template<typename _InputIterator, typename _OutputIterator,
+    typename _Compare>
+    _OutputIterator
+    __move_merge(_InputIterator __first1, _InputIterator __last1,
+   _InputIterator __first2, _InputIterator __last2,
+   _OutputIterator __result, _Compare __comp)
+    {
+      while (__first1 != __last1 && __first2 != __last2)
+ {
+   if (__comp(__first2, __first1))
+     {
+       *__result = std::move(*__first2);
+       ++__first2;
+     }
+   else
+     {
+       *__result = std::move(*__first1);
+       ++__first1;
+     }
+   ++__result;
+ }
+      return std::move(__first2, __last2, std::move(__first1, __last1, __result))
+
+                  ;
+    }
+
+  template<typename _RandomAccessIterator1, typename _RandomAccessIterator2,
+    typename _Distance, typename _Compare>
+    void
+    __merge_sort_loop(_RandomAccessIterator1 __first,
+        _RandomAccessIterator1 __last,
+        _RandomAccessIterator2 __result, _Distance __step_size,
+        _Compare __comp)
+    {
+      const _Distance __two_step = 2 * __step_size;
+
+      while (__last - __first >= __two_step)
+ {
+   __result = std::__move_merge(__first, __first + __step_size,
+           __first + __step_size,
+           __first + __two_step,
+           __result, __comp);
+   __first += __two_step;
+ }
+      __step_size = std::min(_Distance(__last - __first), __step_size);
+
+      std::__move_merge(__first, __first + __step_size,
+   __first + __step_size, __last, __result, __comp);
+    }
+
+  template<typename _RandomAccessIterator, typename _Distance,
+    typename _Compare>
+   
+    void
+    __chunk_insertion_sort(_RandomAccessIterator __first,
+      _RandomAccessIterator __last,
+      _Distance __chunk_size, _Compare __comp)
+    {
+      while (__last - __first >= __chunk_size)
+ {
+   std::__insertion_sort(__first, __first + __chunk_size, __comp);
+   __first += __chunk_size;
+ }
+      std::__insertion_sort(__first, __last, __comp);
+    }
+
+  enum { _S_chunk_size = 7 };
+
+  template<typename _RandomAccessIterator, typename _Pointer, typename _Compare>
+    void
+    __merge_sort_with_buffer(_RandomAccessIterator __first,
+        _RandomAccessIterator __last,
+        _Pointer __buffer, _Compare __comp)
+    {
+      typedef typename iterator_traits<_RandomAccessIterator>::difference_type
+ _Distance;
+
+      const _Distance __len = __last - __first;
+      const _Pointer __buffer_last = __buffer + __len;
+
+      _Distance __step_size = _S_chunk_size;
+      std::__chunk_insertion_sort(__first, __last, __step_size, __comp);
+
+      while (__step_size < __len)
+ {
+   std::__merge_sort_loop(__first, __last, __buffer,
+     __step_size, __comp);
+   __step_size *= 2;
+   std::__merge_sort_loop(__buffer, __buffer_last, __first,
+     __step_size, __comp);
+   __step_size *= 2;
+ }
+    }
+
+  template<typename _RandomAccessIterator, typename _Pointer, typename _Compare>
+    void
+    __stable_sort_adaptive(_RandomAccessIterator __first,
+      _RandomAccessIterator __middle,
+      _RandomAccessIterator __last,
+      _Pointer __buffer, _Compare __comp)
+    {
+      std::__merge_sort_with_buffer(__first, __middle, __buffer, __comp);
+      std::__merge_sort_with_buffer(__middle, __last, __buffer, __comp);
+
+      std::__merge_adaptive(__first, __middle, __last,
+       __middle - __first, __last - __middle,
+       __buffer, __comp);
+    }
+
+  template<typename _RandomAccessIterator, typename _Pointer,
+    typename _Distance, typename _Compare>
+    void
+    __stable_sort_adaptive_resize(_RandomAccessIterator __first,
+      _RandomAccessIterator __last,
+      _Pointer __buffer, _Distance __buffer_size,
+      _Compare __comp)
+    {
+      const _Distance __len = (__last - __first + 1) / 2;
+      const _RandomAccessIterator __middle = __first + __len;
+      if (__len > __buffer_size)
+ {
+   std::__stable_sort_adaptive_resize(__first, __middle, __buffer,
+          __buffer_size, __comp);
+   std::__stable_sort_adaptive_resize(__middle, __last, __buffer,
+          __buffer_size, __comp);
+   std::__merge_adaptive_resize(__first, __middle, __last,
+           _Distance(__middle - __first),
+           _Distance(__last - __middle),
+           __buffer, __buffer_size,
+           __comp);
+ }
+      else
+ std::__stable_sort_adaptive(__first, __middle, __last,
+        __buffer, __comp);
+    }
+
+
+  template<typename _RandomAccessIterator, typename _Compare>
+    void
+    __inplace_stable_sort(_RandomAccessIterator __first,
+     _RandomAccessIterator __last, _Compare __comp)
+    {
+      if (__last - __first < 15)
+ {
+   std::__insertion_sort(__first, __last, __comp);
+   return;
+ }
+      _RandomAccessIterator __middle = __first + (__last - __first) / 2;
+      std::__inplace_stable_sort(__first, __middle, __comp);
+      std::__inplace_stable_sort(__middle, __last, __comp);
+      std::__merge_without_buffer(__first, __middle, __last,
+      __middle - __first,
+      __last - __middle,
+      __comp);
+    }
+# 2809 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _Compare>
+   
+    bool
+    __includes(_InputIterator1 __first1, _InputIterator1 __last1,
+        _InputIterator2 __first2, _InputIterator2 __last2,
+        _Compare __comp)
+    {
+      while (__first1 != __last1 && __first2 != __last2)
+ {
+   if (__comp(__first2, __first1))
+     return false;
+   if (!__comp(__first1, __first2))
+     ++__first2;
+   ++__first1;
+ }
+
+      return __first2 == __last2;
+    }
+# 2847 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator1, typename _InputIterator2>
+   
+    inline bool
+    includes(_InputIterator1 __first1, _InputIterator1 __last1,
+      _InputIterator2 __first2, _InputIterator2 __last2)
+    {
+
+     
+     
+     
+
+
+     
+
+
+      ;
+      ;
+      ;
+      ;
+
+      return std::__includes(__first1, __last1, __first2, __last2,
+        __gnu_cxx::__ops::__iter_less_iter());
+    }
+# 2892 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _Compare>
+   
+    inline bool
+    includes(_InputIterator1 __first1, _InputIterator1 __last1,
+      _InputIterator2 __first2, _InputIterator2 __last2,
+      _Compare __comp)
+    {
+
+     
+     
+     
+
+
+     
+
+
+      ;
+      ;
+      ;
+      ;
+
+      return std::__includes(__first1, __last1, __first2, __last2,
+        __gnu_cxx::__ops::__iter_comp_iter(__comp));
+    }
+# 2928 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _BidirectionalIterator, typename _Compare>
+   
+    bool
+    __next_permutation(_BidirectionalIterator __first,
+         _BidirectionalIterator __last, _Compare __comp)
+    {
+      if (__first == __last)
+ return false;
+      _BidirectionalIterator __i = __first;
+      ++__i;
+      if (__i == __last)
+ return false;
+      __i = __last;
+      --__i;
+
+      for(;;)
+ {
+   _BidirectionalIterator __ii = __i;
+   --__i;
+   if (__comp(__i, __ii))
+     {
+       _BidirectionalIterator __j = __last;
+       while (!__comp(__i, --__j))
+  {}
+       std::iter_swap(__i, __j);
+       std::__reverse(__ii, __last,
+        std::__iterator_category(__first));
+       return true;
+     }
+   if (__i == __first)
+     {
+       std::__reverse(__first, __last,
+        std::__iterator_category(__first));
+       return false;
+     }
+ }
+    }
+# 2978 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _BidirectionalIterator>
+   
+    inline bool
+    next_permutation(_BidirectionalIterator __first,
+       _BidirectionalIterator __last)
+    {
+
+     
+
+     
+
+      ;
+      ;
+
+      return std::__next_permutation
+ (__first, __last, __gnu_cxx::__ops::__iter_less_iter());
+    }
+# 3011 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _BidirectionalIterator, typename _Compare>
+   
+    inline bool
+    next_permutation(_BidirectionalIterator __first,
+       _BidirectionalIterator __last, _Compare __comp)
+    {
+
+     
+
+     
+
+
+      ;
+      ;
+
+      return std::__next_permutation
+ (__first, __last, __gnu_cxx::__ops::__iter_comp_iter(__comp));
+    }
+
+  template<typename _BidirectionalIterator, typename _Compare>
+   
+    bool
+    __prev_permutation(_BidirectionalIterator __first,
+         _BidirectionalIterator __last, _Compare __comp)
+    {
+      if (__first == __last)
+ return false;
+      _BidirectionalIterator __i = __first;
+      ++__i;
+      if (__i == __last)
+ return false;
+      __i = __last;
+      --__i;
+
+      for(;;)
+ {
+   _BidirectionalIterator __ii = __i;
+   --__i;
+   if (__comp(__ii, __i))
+     {
+       _BidirectionalIterator __j = __last;
+       while (!__comp(--__j, __i))
+  {}
+       std::iter_swap(__i, __j);
+       std::__reverse(__ii, __last,
+        std::__iterator_category(__first));
+       return true;
+     }
+   if (__i == __first)
+     {
+       std::__reverse(__first, __last,
+        std::__iterator_category(__first));
+       return false;
+     }
+ }
+    }
+# 3081 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _BidirectionalIterator>
+   
+    inline bool
+    prev_permutation(_BidirectionalIterator __first,
+       _BidirectionalIterator __last)
+    {
+
+     
+
+     
+
+      ;
+      ;
+
+      return std::__prev_permutation(__first, __last,
+         __gnu_cxx::__ops::__iter_less_iter());
+    }
+# 3114 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _BidirectionalIterator, typename _Compare>
+   
+    inline bool
+    prev_permutation(_BidirectionalIterator __first,
+       _BidirectionalIterator __last, _Compare __comp)
+    {
+
+     
+
+     
+
+
+      ;
+      ;
+
+      return std::__prev_permutation(__first, __last,
+    __gnu_cxx::__ops::__iter_comp_iter(__comp));
+    }
+
+
+
+
+  template<typename _InputIterator, typename _OutputIterator,
+    typename _Predicate, typename _Tp>
+   
+    _OutputIterator
+    __replace_copy_if(_InputIterator __first, _InputIterator __last,
+        _OutputIterator __result,
+        _Predicate __pred, const _Tp& __new_value)
+    {
+      for (; __first != __last; ++__first, (void)++__result)
+ if (__pred(__first))
+   *__result = __new_value;
+ else
+   *__result = *__first;
+      return __result;
+    }
+# 3166 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _OutputIterator, typename _Tp>
+   
+    inline _OutputIterator
+    replace_copy(_InputIterator __first, _InputIterator __last,
+   _OutputIterator __result,
+   const _Tp& __old_value, const _Tp& __new_value)
+    {
+
+     
+     
+
+     
+
+      ;
+
+      return std::__replace_copy_if(__first, __last, __result,
+   __gnu_cxx::__ops::__iter_equals_val(__old_value),
+           __new_value);
+    }
+# 3201 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _OutputIterator,
+    typename _Predicate, typename _Tp>
+   
+    inline _OutputIterator
+    replace_copy_if(_InputIterator __first, _InputIterator __last,
+      _OutputIterator __result,
+      _Predicate __pred, const _Tp& __new_value)
+    {
+
+     
+     
+
+     
+
+      ;
+
+      return std::__replace_copy_if(__first, __last, __result,
+    __gnu_cxx::__ops::__pred_iter(__pred),
+           __new_value);
+    }
+# 3230 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator>
+   
+    inline bool
+    is_sorted(_ForwardIterator __first, _ForwardIterator __last)
+    { return std::is_sorted_until(__first, __last) == __last; }
+# 3245 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Compare>
+   
+    inline bool
+    is_sorted(_ForwardIterator __first, _ForwardIterator __last,
+       _Compare __comp)
+    { return std::is_sorted_until(__first, __last, __comp) == __last; }
+
+  template<typename _ForwardIterator, typename _Compare>
+   
+    _ForwardIterator
+    __is_sorted_until(_ForwardIterator __first, _ForwardIterator __last,
+        _Compare __comp)
+    {
+      if (__first == __last)
+ return __last;
+
+      _ForwardIterator __next = __first;
+      for (++__next; __next != __last; __first = __next, (void)++__next)
+ if (__comp(__next, __first))
+   return __next;
+      return __next;
+    }
+# 3276 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator>
+   
+    inline _ForwardIterator
+    is_sorted_until(_ForwardIterator __first, _ForwardIterator __last)
+    {
+
+     
+     
+
+      ;
+      ;
+
+      return std::__is_sorted_until(__first, __last,
+        __gnu_cxx::__ops::__iter_less_iter());
+    }
+# 3301 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Compare>
+   
+    inline _ForwardIterator
+    is_sorted_until(_ForwardIterator __first, _ForwardIterator __last,
+      _Compare __comp)
+    {
+
+     
+     
+
+
+      ;
+      ;
+
+      return std::__is_sorted_until(__first, __last,
+        __gnu_cxx::__ops::__iter_comp_iter(__comp));
+    }
+# 3327 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _Tp>
+    constexpr
+    inline pair<const _Tp&, const _Tp&>
+    minmax(const _Tp& __a, const _Tp& __b)
+    {
+
+     
+
+      return __b < __a ? pair<const _Tp&, const _Tp&>(__b, __a)
+         : pair<const _Tp&, const _Tp&>(__a, __b);
+    }
+# 3348 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _Tp, typename _Compare>
+    constexpr
+    inline pair<const _Tp&, const _Tp&>
+    minmax(const _Tp& __a, const _Tp& __b, _Compare __comp)
+    {
+      return __comp(__b, __a) ? pair<const _Tp&, const _Tp&>(__b, __a)
+         : pair<const _Tp&, const _Tp&>(__a, __b);
+    }
+
+  template<typename _ForwardIterator, typename _Compare>
+    constexpr
+    pair<_ForwardIterator, _ForwardIterator>
+    __minmax_element(_ForwardIterator __first, _ForwardIterator __last,
+       _Compare __comp)
+    {
+      _ForwardIterator __next = __first;
+      if (__first == __last
+   || ++__next == __last)
+ return std::make_pair(__first, __first);
+
+      _ForwardIterator __min{}, __max{};
+      if (__comp(__next, __first))
+ {
+   __min = __next;
+   __max = __first;
+ }
+      else
+ {
+   __min = __first;
+   __max = __next;
+ }
+
+      __first = __next;
+      ++__first;
+
+      while (__first != __last)
+ {
+   __next = __first;
+   if (++__next == __last)
+     {
+       if (__comp(__first, __min))
+  __min = __first;
+       else if (!__comp(__first, __max))
+  __max = __first;
+       break;
+     }
+
+   if (__comp(__next, __first))
+     {
+       if (__comp(__next, __min))
+  __min = __next;
+       if (!__comp(__first, __max))
+  __max = __first;
+     }
+   else
+     {
+       if (__comp(__first, __min))
+  __min = __first;
+       if (!__comp(__next, __max))
+  __max = __next;
+     }
+
+   __first = __next;
+   ++__first;
+ }
+
+      return std::make_pair(__min, __max);
+    }
+# 3428 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator>
+    constexpr
+    inline pair<_ForwardIterator, _ForwardIterator>
+    minmax_element(_ForwardIterator __first, _ForwardIterator __last)
+    {
+
+     
+     
+
+      ;
+      ;
+
+      return std::__minmax_element(__first, __last,
+       __gnu_cxx::__ops::__iter_less_iter());
+    }
+# 3456 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Compare>
+    constexpr
+    inline pair<_ForwardIterator, _ForwardIterator>
+    minmax_element(_ForwardIterator __first, _ForwardIterator __last,
+     _Compare __comp)
+    {
+
+     
+     
+
+
+      ;
+      ;
+
+      return std::__minmax_element(__first, __last,
+       __gnu_cxx::__ops::__iter_comp_iter(__comp));
+    }
+
+  template<typename _Tp>
+    constexpr
+    inline pair<_Tp, _Tp>
+    minmax(initializer_list<_Tp> __l)
+    {
+      ;
+      pair<const _Tp*, const _Tp*> __p =
+ std::__minmax_element(__l.begin(), __l.end(),
+         __gnu_cxx::__ops::__iter_less_iter());
+      return std::make_pair(*__p.first, *__p.second);
+    }
+
+  template<typename _Tp, typename _Compare>
+    constexpr
+    inline pair<_Tp, _Tp>
+    minmax(initializer_list<_Tp> __l, _Compare __comp)
+    {
+      ;
+      pair<const _Tp*, const _Tp*> __p =
+ std::__minmax_element(__l.begin(), __l.end(),
+         __gnu_cxx::__ops::__iter_comp_iter(__comp));
+      return std::make_pair(*__p.first, *__p.second);
+    }
+# 3512 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator1, typename _ForwardIterator2,
+    typename _BinaryPredicate>
+   
+    inline bool
+    is_permutation(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
+     _ForwardIterator2 __first2, _BinaryPredicate __pred)
+    {
+
+     
+     
+     
+
+
+      ;
+
+      return std::__is_permutation(__first1, __last1, __first2,
+       __gnu_cxx::__ops::__iter_comp_iter(__pred));
+    }
+
+
+  template<typename _ForwardIterator1, typename _ForwardIterator2,
+    typename _BinaryPredicate>
+   
+    bool
+    __is_permutation(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
+       _ForwardIterator2 __first2, _ForwardIterator2 __last2,
+       _BinaryPredicate __pred)
+    {
+      using _Cat1
+ = typename iterator_traits<_ForwardIterator1>::iterator_category;
+      using _Cat2
+ = typename iterator_traits<_ForwardIterator2>::iterator_category;
+      using _It1_is_RA = is_same<_Cat1, random_access_iterator_tag>;
+      using _It2_is_RA = is_same<_Cat2, random_access_iterator_tag>;
+      constexpr bool __ra_iters = _It1_is_RA() && _It2_is_RA();
+      if (__ra_iters)
+ {
+   auto __d1 = std::distance(__first1, __last1);
+   auto __d2 = std::distance(__first2, __last2);
+   if (__d1 != __d2)
+     return false;
+ }
+
+
+
+      for (; __first1 != __last1 && __first2 != __last2;
+   ++__first1, (void)++__first2)
+ if (!__pred(__first1, __first2))
+   break;
+
+      if (__ra_iters)
+ {
+   if (__first1 == __last1)
+     return true;
+ }
+      else
+ {
+   auto __d1 = std::distance(__first1, __last1);
+   auto __d2 = std::distance(__first2, __last2);
+   if (__d1 == 0 && __d2 == 0)
+     return true;
+   if (__d1 != __d2)
+     return false;
+ }
+
+      for (_ForwardIterator1 __scan = __first1; __scan != __last1; ++__scan)
+ {
+   if (__scan != std::__find_if(__first1, __scan,
+   __gnu_cxx::__ops::__iter_comp_iter(__pred, __scan)))
+     continue;
+
+   auto __matches = std::__count_if(__first2, __last2,
+  __gnu_cxx::__ops::__iter_comp_iter(__pred, __scan));
+   if (0 == __matches
+       || std::__count_if(__scan, __last1,
+   __gnu_cxx::__ops::__iter_comp_iter(__pred, __scan))
+       != __matches)
+     return false;
+ }
+      return true;
+    }
+# 3607 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator1, typename _ForwardIterator2>
+   
+    inline bool
+    is_permutation(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
+     _ForwardIterator2 __first2, _ForwardIterator2 __last2)
+    {
+      ;
+      ;
+
+      return
+ std::__is_permutation(__first1, __last1, __first2, __last2,
+         __gnu_cxx::__ops::__iter_equal_to_iter());
+    }
+# 3635 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator1, typename _ForwardIterator2,
+    typename _BinaryPredicate>
+   
+    inline bool
+    is_permutation(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
+     _ForwardIterator2 __first2, _ForwardIterator2 __last2,
+     _BinaryPredicate __pred)
+    {
+      ;
+      ;
+
+      return std::__is_permutation(__first1, __last1, __first2, __last2,
+       __gnu_cxx::__ops::__iter_comp_iter(__pred));
+    }
+# 3665 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _Tp>
+    constexpr const _Tp&
+    clamp(const _Tp& __val, const _Tp& __lo, const _Tp& __hi)
+    {
+      do { if (std::__is_constant_evaluated() && !bool(!(__hi < __lo))) __builtin_unreachable(); } while (false);
+      return std::min(std::max(__val, __lo), __hi);
+    }
+# 3685 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _Tp, typename _Compare>
+    constexpr const _Tp&
+    clamp(const _Tp& __val, const _Tp& __lo, const _Tp& __hi, _Compare __comp)
+    {
+      do { if (std::__is_constant_evaluated() && !bool(!__comp(__hi, __lo))) __builtin_unreachable(); } while (false);
+      return std::min(std::max(__val, __lo, __comp), __hi, __comp);
+    }
+# 3717 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _IntType, typename _UniformRandomBitGenerator>
+    pair<_IntType, _IntType>
+    __gen_two_uniform_ints(_IntType __b0, _IntType __b1,
+      _UniformRandomBitGenerator&& __g)
+    {
+      _IntType __x
+ = uniform_int_distribution<_IntType>{0, (__b0 * __b1) - 1}(__g);
+      return std::make_pair(__x / __b1, __x % __b1);
+    }
+# 3739 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _RandomAccessIterator,
+    typename _UniformRandomNumberGenerator>
+    void
+    shuffle(_RandomAccessIterator __first, _RandomAccessIterator __last,
+     _UniformRandomNumberGenerator&& __g)
+    {
+
+     
+
+      ;
+
+      if (__first == __last)
+ return;
+
+      typedef typename iterator_traits<_RandomAccessIterator>::difference_type
+ _DistanceType;
+
+      typedef typename std::make_unsigned<_DistanceType>::type __ud_type;
+      typedef typename std::uniform_int_distribution<__ud_type> __distr_type;
+      typedef typename __distr_type::param_type __p_type;
+
+      typedef typename remove_reference<_UniformRandomNumberGenerator>::type
+ _Gen;
+      typedef typename common_type<typename _Gen::result_type, __ud_type>::type
+ __uc_type;
+
+      const __uc_type __urngrange = __g.max() - __g.min();
+      const __uc_type __urange = __uc_type(__last - __first);
+
+      if (__urngrange / __urange >= __urange)
+
+      {
+ _RandomAccessIterator __i = __first + 1;
+
+
+
+
+
+ if ((__urange % 2) == 0)
+ {
+   __distr_type __d{0, 1};
+   std::iter_swap(__i++, __first + __d(__g));
+ }
+
+
+
+
+
+ while (__i != __last)
+ {
+   const __uc_type __swap_range = __uc_type(__i - __first) + 1;
+
+   const pair<__uc_type, __uc_type> __pospos =
+     __gen_two_uniform_ints(__swap_range, __swap_range + 1, __g);
+
+   std::iter_swap(__i++, __first + __pospos.first);
+   std::iter_swap(__i++, __first + __pospos.second);
+ }
+
+ return;
+      }
+
+      __distr_type __d;
+
+      for (_RandomAccessIterator __i = __first + 1; __i != __last; ++__i)
+ std::iter_swap(__i, __first + __d(__g, __p_type(0, __i - __first)));
+    }
+
+
+
+
+
+# 3824 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _Function>
+   
+    _Function
+    for_each(_InputIterator __first, _InputIterator __last, _Function __f)
+    {
+
+     
+      ;
+      for (; __first != __last; ++__first)
+ __f(*__first);
+      return __f;
+    }
+# 3850 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _Size, typename _Function>
+   
+    _InputIterator
+    for_each_n(_InputIterator __first, _Size __n, _Function __f)
+    {
+      auto __n2 = std::__size_to_integer(__n);
+      using _Cat = typename iterator_traits<_InputIterator>::iterator_category;
+      if constexpr (is_base_of_v<random_access_iterator_tag, _Cat>)
+ {
+   if (__n2 <= 0)
+     return __first;
+   auto __last = __first + __n2;
+   std::for_each(__first, __last, std::move(__f));
+   return __last;
+ }
+      else
+ {
+   while (__n2-->0)
+     {
+       __f(*__first);
+       ++__first;
+     }
+   return __first;
+ }
+    }
+# 3886 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _Tp>
+   
+    inline _InputIterator
+    find(_InputIterator __first, _InputIterator __last,
+  const _Tp& __val)
+    {
+
+     
+     
+
+      ;
+      return std::__find_if(__first, __last,
+       __gnu_cxx::__ops::__iter_equals_val(__val));
+    }
+# 3911 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _Predicate>
+   
+    inline _InputIterator
+    find_if(_InputIterator __first, _InputIterator __last,
+     _Predicate __pred)
+    {
+
+     
+     
+
+      ;
+
+      return std::__find_if(__first, __last,
+       __gnu_cxx::__ops::__pred_iter(__pred));
+    }
+# 3943 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _ForwardIterator>
+   
+    _InputIterator
+    find_first_of(_InputIterator __first1, _InputIterator __last1,
+    _ForwardIterator __first2, _ForwardIterator __last2)
+    {
+
+     
+     
+     
+
+
+      ;
+      ;
+
+      for (; __first1 != __last1; ++__first1)
+ for (_ForwardIterator __iter = __first2; __iter != __last2; ++__iter)
+   if (*__first1 == *__iter)
+     return __first1;
+      return __last1;
+    }
+# 3984 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _ForwardIterator,
+    typename _BinaryPredicate>
+   
+    _InputIterator
+    find_first_of(_InputIterator __first1, _InputIterator __last1,
+    _ForwardIterator __first2, _ForwardIterator __last2,
+    _BinaryPredicate __comp)
+    {
+
+     
+     
+     
+
+
+      ;
+      ;
+
+      for (; __first1 != __last1; ++__first1)
+ for (_ForwardIterator __iter = __first2; __iter != __last2; ++__iter)
+   if (__comp(*__first1, *__iter))
+     return __first1;
+      return __last1;
+    }
+# 4017 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator>
+   
+    inline _ForwardIterator
+    adjacent_find(_ForwardIterator __first, _ForwardIterator __last)
+    {
+
+     
+     
+
+      ;
+
+      return std::__adjacent_find(__first, __last,
+      __gnu_cxx::__ops::__iter_equal_to_iter());
+    }
+# 4043 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _BinaryPredicate>
+   
+    inline _ForwardIterator
+    adjacent_find(_ForwardIterator __first, _ForwardIterator __last,
+    _BinaryPredicate __binary_pred)
+    {
+
+     
+     
+
+
+      ;
+
+      return std::__adjacent_find(__first, __last,
+   __gnu_cxx::__ops::__iter_comp_iter(__binary_pred));
+    }
+# 4069 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _Tp>
+   
+    inline typename iterator_traits<_InputIterator>::difference_type
+    count(_InputIterator __first, _InputIterator __last, const _Tp& __value)
+    {
+
+     
+     
+
+      ;
+
+      return std::__count_if(__first, __last,
+        __gnu_cxx::__ops::__iter_equals_val(__value));
+    }
+# 4093 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _Predicate>
+   
+    inline typename iterator_traits<_InputIterator>::difference_type
+    count_if(_InputIterator __first, _InputIterator __last, _Predicate __pred)
+    {
+
+     
+     
+
+      ;
+
+      return std::__count_if(__first, __last,
+        __gnu_cxx::__ops::__pred_iter(__pred));
+    }
+# 4134 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator1, typename _ForwardIterator2>
+   
+    inline _ForwardIterator1
+    search(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
+    _ForwardIterator2 __first2, _ForwardIterator2 __last2)
+    {
+
+     
+     
+     
+
+
+      ;
+      ;
+
+      return std::__search(__first1, __last1, __first2, __last2,
+      __gnu_cxx::__ops::__iter_equal_to_iter());
+    }
+# 4174 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator1, typename _ForwardIterator2,
+    typename _BinaryPredicate>
+   
+    inline _ForwardIterator1
+    search(_ForwardIterator1 __first1, _ForwardIterator1 __last1,
+    _ForwardIterator2 __first2, _ForwardIterator2 __last2,
+    _BinaryPredicate __predicate)
+    {
+
+     
+     
+     
+
+
+      ;
+      ;
+
+      return std::__search(__first1, __last1, __first2, __last2,
+      __gnu_cxx::__ops::__iter_comp_iter(__predicate));
+    }
+# 4210 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Integer, typename _Tp>
+   
+    inline _ForwardIterator
+    search_n(_ForwardIterator __first, _ForwardIterator __last,
+      _Integer __count, const _Tp& __val)
+    {
+
+     
+     
+
+      ;
+
+      return std::__search_n(__first, __last, __count,
+        __gnu_cxx::__ops::__iter_equals_val(__val));
+    }
+# 4244 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Integer, typename _Tp,
+    typename _BinaryPredicate>
+   
+    inline _ForwardIterator
+    search_n(_ForwardIterator __first, _ForwardIterator __last,
+      _Integer __count, const _Tp& __val,
+      _BinaryPredicate __binary_pred)
+    {
+
+     
+     
+
+      ;
+
+      return std::__search_n(__first, __last, __count,
+  __gnu_cxx::__ops::__iter_comp_val(__binary_pred, __val));
+    }
+# 4270 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Searcher>
+   
+    inline _ForwardIterator
+    search(_ForwardIterator __first, _ForwardIterator __last,
+    const _Searcher& __searcher)
+    { return __searcher(__first, __last).first; }
+# 4294 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _OutputIterator,
+    typename _UnaryOperation>
+   
+    _OutputIterator
+    transform(_InputIterator __first, _InputIterator __last,
+       _OutputIterator __result, _UnaryOperation __unary_op)
+    {
+
+     
+     
+
+
+      ;
+
+      for (; __first != __last; ++__first, (void)++__result)
+ *__result = __unary_op(*__first);
+      return __result;
+    }
+# 4332 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _OutputIterator, typename _BinaryOperation>
+   
+    _OutputIterator
+    transform(_InputIterator1 __first1, _InputIterator1 __last1,
+       _InputIterator2 __first2, _OutputIterator __result,
+       _BinaryOperation __binary_op)
+    {
+
+     
+     
+     
+
+
+      ;
+
+      for (; __first1 != __last1; ++__first1, (void)++__first2, ++__result)
+ *__result = __binary_op(*__first1, *__first2);
+      return __result;
+    }
+# 4366 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Tp>
+   
+    void
+    replace(_ForwardIterator __first, _ForwardIterator __last,
+     const _Tp& __old_value, const _Tp& __new_value)
+    {
+
+     
+
+     
+
+     
+
+      ;
+
+      for (; __first != __last; ++__first)
+ if (*__first == __old_value)
+   *__first = __new_value;
+    }
+# 4399 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Predicate, typename _Tp>
+   
+    void
+    replace_if(_ForwardIterator __first, _ForwardIterator __last,
+        _Predicate __pred, const _Tp& __new_value)
+    {
+
+     
+
+     
+
+     
+
+      ;
+
+      for (; __first != __last; ++__first)
+ if (__pred(*__first))
+   *__first = __new_value;
+    }
+# 4431 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Generator>
+   
+    void
+    generate(_ForwardIterator __first, _ForwardIterator __last,
+      _Generator __gen)
+    {
+
+     
+     
+
+      ;
+
+      for (; __first != __last; ++__first)
+ *__first = __gen();
+    }
+# 4464 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _OutputIterator, typename _Size, typename _Generator>
+   
+    _OutputIterator
+    generate_n(_OutputIterator __first, _Size __n, _Generator __gen)
+    {
+
+     
+
+
+
+      typedef __decltype(std::__size_to_integer(__n)) _IntSize;
+      for (_IntSize __niter = std::__size_to_integer(__n);
+    __niter > 0; --__niter, (void) ++__first)
+ *__first = __gen();
+      return __first;
+    }
+# 4499 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _OutputIterator>
+   
+    inline _OutputIterator
+    unique_copy(_InputIterator __first, _InputIterator __last,
+  _OutputIterator __result)
+    {
+
+     
+     
+
+     
+
+      ;
+
+      if (__first == __last)
+ return __result;
+      return std::__unique_copy(__first, __last, __result,
+    __gnu_cxx::__ops::__iter_equal_to_iter(),
+    std::__iterator_category(__first),
+    std::__iterator_category(__result));
+    }
+# 4539 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator, typename _OutputIterator,
+    typename _BinaryPredicate>
+   
+    inline _OutputIterator
+    unique_copy(_InputIterator __first, _InputIterator __last,
+  _OutputIterator __result,
+  _BinaryPredicate __binary_pred)
+    {
+
+     
+     
+
+      ;
+
+      if (__first == __last)
+ return __result;
+      return std::__unique_copy(__first, __last, __result,
+   __gnu_cxx::__ops::__iter_comp_iter(__binary_pred),
+    std::__iterator_category(__first),
+    std::__iterator_category(__result));
+    }
+# 4578 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _RandomAccessIterator>
+    __attribute__ ((__deprecated__ ("use '" "std::shuffle" "' instead")))
+    inline void
+    random_shuffle(_RandomAccessIterator __first, _RandomAccessIterator __last)
+    {
+
+     
+
+      ;
+
+      if (__first != __last)
+ for (_RandomAccessIterator __i = __first + 1; __i != __last; ++__i)
+   {
+
+     _RandomAccessIterator __j = __first
+     + std::rand() % ((__i - __first) + 1);
+     if (__i != __j)
+       std::iter_swap(__i, __j);
+   }
+    }
+# 4617 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _RandomAccessIterator, typename _RandomNumberGenerator>
+    __attribute__ ((__deprecated__ ("use '" "std::shuffle" "' instead")))
+    void
+    random_shuffle(_RandomAccessIterator __first, _RandomAccessIterator __last,
+
+     _RandomNumberGenerator&& __rand)
+
+
+
+    {
+
+     
+
+      ;
+
+      if (__first == __last)
+ return;
+      for (_RandomAccessIterator __i = __first + 1; __i != __last; ++__i)
+ {
+   _RandomAccessIterator __j = __first + __rand((__i - __first) + 1);
+   if (__i != __j)
+     std::iter_swap(__i, __j);
+ }
+    }
+# 4659 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Predicate>
+   
+    inline _ForwardIterator
+    partition(_ForwardIterator __first, _ForwardIterator __last,
+       _Predicate __pred)
+    {
+
+     
+
+     
+
+      ;
+
+      return std::__partition(__first, __last, __pred,
+         std::__iterator_category(__first));
+    }
+# 4694 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _RandomAccessIterator>
+   
+    inline void
+    partial_sort(_RandomAccessIterator __first,
+   _RandomAccessIterator __middle,
+   _RandomAccessIterator __last)
+    {
+
+     
+
+     
+
+      ;
+      ;
+      ;
+
+      std::__partial_sort(__first, __middle, __last,
+     __gnu_cxx::__ops::__iter_less_iter());
+    }
+# 4733 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _RandomAccessIterator, typename _Compare>
+   
+    inline void
+    partial_sort(_RandomAccessIterator __first,
+   _RandomAccessIterator __middle,
+   _RandomAccessIterator __last,
+   _Compare __comp)
+    {
+
+     
+
+     
+
+
+      ;
+      ;
+      ;
+
+      std::__partial_sort(__first, __middle, __last,
+     __gnu_cxx::__ops::__iter_comp_iter(__comp));
+    }
+# 4770 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _RandomAccessIterator>
+   
+    inline void
+    nth_element(_RandomAccessIterator __first, _RandomAccessIterator __nth,
+  _RandomAccessIterator __last)
+    {
+
+     
+
+     
+
+      ;
+      ;
+      ;
+
+      if (__first == __last || __nth == __last)
+ return;
+
+      std::__introselect(__first, __nth, __last,
+    std::__lg(__last - __first) * 2,
+    __gnu_cxx::__ops::__iter_less_iter());
+    }
+# 4810 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _RandomAccessIterator, typename _Compare>
+   
+    inline void
+    nth_element(_RandomAccessIterator __first, _RandomAccessIterator __nth,
+  _RandomAccessIterator __last, _Compare __comp)
+    {
+
+     
+
+     
+
+
+      ;
+      ;
+      ;
+
+      if (__first == __last || __nth == __last)
+ return;
+
+      std::__introselect(__first, __nth, __last,
+    std::__lg(__last - __first) * 2,
+    __gnu_cxx::__ops::__iter_comp_iter(__comp));
+    }
+# 4848 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _RandomAccessIterator>
+   
+    inline void
+    sort(_RandomAccessIterator __first, _RandomAccessIterator __last)
+    {
+
+     
+
+     
+
+      ;
+      ;
+
+      std::__sort(__first, __last, __gnu_cxx::__ops::__iter_less_iter());
+    }
+# 4879 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _RandomAccessIterator, typename _Compare>
+   
+    inline void
+    sort(_RandomAccessIterator __first, _RandomAccessIterator __last,
+  _Compare __comp)
+    {
+
+     
+
+     
+
+
+      ;
+      ;
+
+      std::__sort(__first, __last, __gnu_cxx::__ops::__iter_comp_iter(__comp));
+    }
+
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _OutputIterator, typename _Compare>
+   
+    _OutputIterator
+    __merge(_InputIterator1 __first1, _InputIterator1 __last1,
+     _InputIterator2 __first2, _InputIterator2 __last2,
+     _OutputIterator __result, _Compare __comp)
+    {
+      while (__first1 != __last1 && __first2 != __last2)
+ {
+   if (__comp(__first2, __first1))
+     {
+       *__result = *__first2;
+       ++__first2;
+     }
+   else
+     {
+       *__result = *__first1;
+       ++__first1;
+     }
+   ++__result;
+ }
+      return std::copy(__first2, __last2,
+         std::copy(__first1, __last1, __result));
+    }
+# 4942 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _OutputIterator>
+   
+    inline _OutputIterator
+    merge(_InputIterator1 __first1, _InputIterator1 __last1,
+   _InputIterator2 __first2, _InputIterator2 __last2,
+   _OutputIterator __result)
+    {
+
+     
+     
+     
+
+     
+
+     
+
+
+      ;
+      ;
+      ;
+      ;
+
+      return std::__merge(__first1, __last1,
+         __first2, __last2, __result,
+         __gnu_cxx::__ops::__iter_less_iter());
+    }
+# 4993 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _OutputIterator, typename _Compare>
+   
+    inline _OutputIterator
+    merge(_InputIterator1 __first1, _InputIterator1 __last1,
+   _InputIterator2 __first2, _InputIterator2 __last2,
+   _OutputIterator __result, _Compare __comp)
+    {
+
+     
+     
+     
+
+     
+
+     
+
+
+      ;
+      ;
+      ;
+      ;
+
+      return std::__merge(__first1, __last1,
+    __first2, __last2, __result,
+    __gnu_cxx::__ops::__iter_comp_iter(__comp));
+    }
+
+  template<typename _RandomAccessIterator, typename _Compare>
+    inline void
+    __stable_sort(_RandomAccessIterator __first, _RandomAccessIterator __last,
+    _Compare __comp)
+    {
+      typedef typename iterator_traits<_RandomAccessIterator>::value_type
+ _ValueType;
+      typedef typename iterator_traits<_RandomAccessIterator>::difference_type
+ _DistanceType;
+
+      if (__first == __last)
+ return;
+
+
+      typedef _Temporary_buffer<_RandomAccessIterator, _ValueType> _TmpBuf;
+
+
+      _TmpBuf __buf(__first, (__last - __first + 1) / 2);
+
+      if (__builtin_expect(__buf.requested_size() == __buf.size(), true))
+ std::__stable_sort_adaptive(__first,
+        __first + _DistanceType(__buf.size()),
+        __last, __buf.begin(), __comp);
+      else if (__builtin_expect(__buf.begin() == 0, false))
+ std::__inplace_stable_sort(__first, __last, __comp);
+      else
+ std::__stable_sort_adaptive_resize(__first, __last, __buf.begin(),
+        _DistanceType(__buf.size()), __comp);
+
+
+
+    }
+# 5071 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _RandomAccessIterator>
+    inline void
+    stable_sort(_RandomAccessIterator __first, _RandomAccessIterator __last)
+    {
+
+     
+
+     
+
+      ;
+      ;
+
+      std::__stable_sort(__first, __last,
+        __gnu_cxx::__ops::__iter_less_iter());
+    }
+# 5105 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _RandomAccessIterator, typename _Compare>
+    inline void
+    stable_sort(_RandomAccessIterator __first, _RandomAccessIterator __last,
+  _Compare __comp)
+    {
+
+     
+
+     
+
+
+      ;
+      ;
+
+      std::__stable_sort(__first, __last,
+        __gnu_cxx::__ops::__iter_comp_iter(__comp));
+    }
+
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _OutputIterator,
+    typename _Compare>
+   
+    _OutputIterator
+    __set_union(_InputIterator1 __first1, _InputIterator1 __last1,
+  _InputIterator2 __first2, _InputIterator2 __last2,
+  _OutputIterator __result, _Compare __comp)
+    {
+      while (__first1 != __last1 && __first2 != __last2)
+ {
+   if (__comp(__first1, __first2))
+     {
+       *__result = *__first1;
+       ++__first1;
+     }
+   else if (__comp(__first2, __first1))
+     {
+       *__result = *__first2;
+       ++__first2;
+     }
+   else
+     {
+       *__result = *__first1;
+       ++__first1;
+       ++__first2;
+     }
+   ++__result;
+ }
+      return std::copy(__first2, __last2,
+         std::copy(__first1, __last1, __result));
+    }
+# 5175 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _OutputIterator>
+   
+    inline _OutputIterator
+    set_union(_InputIterator1 __first1, _InputIterator1 __last1,
+       _InputIterator2 __first2, _InputIterator2 __last2,
+       _OutputIterator __result)
+    {
+
+     
+     
+     
+
+     
+
+     
+
+
+     
+
+
+      ;
+      ;
+      ;
+      ;
+
+      return std::__set_union(__first1, __last1,
+    __first2, __last2, __result,
+    __gnu_cxx::__ops::__iter_less_iter());
+    }
+# 5226 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _OutputIterator, typename _Compare>
+   
+    inline _OutputIterator
+    set_union(_InputIterator1 __first1, _InputIterator1 __last1,
+       _InputIterator2 __first2, _InputIterator2 __last2,
+       _OutputIterator __result, _Compare __comp)
+    {
+
+     
+     
+     
+
+     
+
+     
+
+
+     
+
+
+      ;
+      ;
+      ;
+      ;
+
+      return std::__set_union(__first1, __last1,
+    __first2, __last2, __result,
+    __gnu_cxx::__ops::__iter_comp_iter(__comp));
+    }
+
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _OutputIterator,
+    typename _Compare>
+   
+    _OutputIterator
+    __set_intersection(_InputIterator1 __first1, _InputIterator1 __last1,
+         _InputIterator2 __first2, _InputIterator2 __last2,
+         _OutputIterator __result, _Compare __comp)
+    {
+      while (__first1 != __last1 && __first2 != __last2)
+ if (__comp(__first1, __first2))
+   ++__first1;
+ else if (__comp(__first2, __first1))
+   ++__first2;
+ else
+   {
+     *__result = *__first1;
+     ++__first1;
+     ++__first2;
+     ++__result;
+   }
+      return __result;
+    }
+# 5299 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _OutputIterator>
+   
+    inline _OutputIterator
+    set_intersection(_InputIterator1 __first1, _InputIterator1 __last1,
+       _InputIterator2 __first2, _InputIterator2 __last2,
+       _OutputIterator __result)
+    {
+
+     
+     
+     
+
+     
+
+
+     
+
+
+      ;
+      ;
+      ;
+      ;
+
+      return std::__set_intersection(__first1, __last1,
+         __first2, __last2, __result,
+         __gnu_cxx::__ops::__iter_less_iter());
+    }
+# 5349 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _OutputIterator, typename _Compare>
+   
+    inline _OutputIterator
+    set_intersection(_InputIterator1 __first1, _InputIterator1 __last1,
+       _InputIterator2 __first2, _InputIterator2 __last2,
+       _OutputIterator __result, _Compare __comp)
+    {
+
+     
+     
+     
+
+     
+
+
+     
+
+
+      ;
+      ;
+      ;
+      ;
+
+      return std::__set_intersection(__first1, __last1,
+    __first2, __last2, __result,
+    __gnu_cxx::__ops::__iter_comp_iter(__comp));
+    }
+
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _OutputIterator,
+    typename _Compare>
+   
+    _OutputIterator
+    __set_difference(_InputIterator1 __first1, _InputIterator1 __last1,
+       _InputIterator2 __first2, _InputIterator2 __last2,
+       _OutputIterator __result, _Compare __comp)
+    {
+      while (__first1 != __last1 && __first2 != __last2)
+ if (__comp(__first1, __first2))
+   {
+     *__result = *__first1;
+     ++__first1;
+     ++__result;
+   }
+ else if (__comp(__first2, __first1))
+   ++__first2;
+ else
+   {
+     ++__first1;
+     ++__first2;
+   }
+      return std::copy(__first1, __last1, __result);
+    }
+# 5424 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _OutputIterator>
+   
+    inline _OutputIterator
+    set_difference(_InputIterator1 __first1, _InputIterator1 __last1,
+     _InputIterator2 __first2, _InputIterator2 __last2,
+     _OutputIterator __result)
+    {
+
+     
+     
+     
+
+     
+
+
+     
+
+
+      ;
+      ;
+      ;
+      ;
+
+      return std::__set_difference(__first1, __last1,
+       __first2, __last2, __result,
+       __gnu_cxx::__ops::__iter_less_iter());
+    }
+# 5476 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _OutputIterator, typename _Compare>
+   
+    inline _OutputIterator
+    set_difference(_InputIterator1 __first1, _InputIterator1 __last1,
+     _InputIterator2 __first2, _InputIterator2 __last2,
+     _OutputIterator __result, _Compare __comp)
+    {
+
+     
+     
+     
+
+     
+
+
+     
+
+
+      ;
+      ;
+      ;
+      ;
+
+      return std::__set_difference(__first1, __last1,
+       __first2, __last2, __result,
+       __gnu_cxx::__ops::__iter_comp_iter(__comp));
+    }
+
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _OutputIterator,
+    typename _Compare>
+   
+    _OutputIterator
+    __set_symmetric_difference(_InputIterator1 __first1,
+          _InputIterator1 __last1,
+          _InputIterator2 __first2,
+          _InputIterator2 __last2,
+          _OutputIterator __result,
+          _Compare __comp)
+    {
+      while (__first1 != __last1 && __first2 != __last2)
+ if (__comp(__first1, __first2))
+   {
+     *__result = *__first1;
+     ++__first1;
+     ++__result;
+   }
+ else if (__comp(__first2, __first1))
+   {
+     *__result = *__first2;
+     ++__first2;
+     ++__result;
+   }
+ else
+   {
+     ++__first1;
+     ++__first2;
+   }
+      return std::copy(__first2, __last2,
+         std::copy(__first1, __last1, __result));
+    }
+# 5557 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _OutputIterator>
+   
+    inline _OutputIterator
+    set_symmetric_difference(_InputIterator1 __first1, _InputIterator1 __last1,
+        _InputIterator2 __first2, _InputIterator2 __last2,
+        _OutputIterator __result)
+    {
+
+     
+     
+     
+
+     
+
+     
+
+
+     
+
+
+      ;
+      ;
+      ;
+      ;
+
+      return std::__set_symmetric_difference(__first1, __last1,
+     __first2, __last2, __result,
+     __gnu_cxx::__ops::__iter_less_iter());
+    }
+# 5609 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _InputIterator1, typename _InputIterator2,
+    typename _OutputIterator, typename _Compare>
+   
+    inline _OutputIterator
+    set_symmetric_difference(_InputIterator1 __first1, _InputIterator1 __last1,
+        _InputIterator2 __first2, _InputIterator2 __last2,
+        _OutputIterator __result,
+        _Compare __comp)
+    {
+
+     
+     
+     
+
+     
+
+     
+
+
+     
+
+
+      ;
+      ;
+      ;
+      ;
+
+      return std::__set_symmetric_difference(__first1, __last1,
+    __first2, __last2, __result,
+    __gnu_cxx::__ops::__iter_comp_iter(__comp));
+    }
+
+  template<typename _ForwardIterator, typename _Compare>
+    constexpr
+    _ForwardIterator
+    __min_element(_ForwardIterator __first, _ForwardIterator __last,
+    _Compare __comp)
+    {
+      if (__first == __last)
+ return __first;
+      _ForwardIterator __result = __first;
+      while (++__first != __last)
+ if (__comp(__first, __result))
+   __result = __first;
+      return __result;
+    }
+# 5663 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator>
+    constexpr
+    _ForwardIterator
+    inline min_element(_ForwardIterator __first, _ForwardIterator __last)
+    {
+
+     
+     
+
+      ;
+      ;
+
+      return std::__min_element(__first, __last,
+    __gnu_cxx::__ops::__iter_less_iter());
+    }
+# 5688 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Compare>
+    constexpr
+    inline _ForwardIterator
+    min_element(_ForwardIterator __first, _ForwardIterator __last,
+  _Compare __comp)
+    {
+
+     
+     
+
+
+      ;
+      ;
+
+      return std::__min_element(__first, __last,
+    __gnu_cxx::__ops::__iter_comp_iter(__comp));
+    }
+
+  template<typename _ForwardIterator, typename _Compare>
+    constexpr
+    _ForwardIterator
+    __max_element(_ForwardIterator __first, _ForwardIterator __last,
+    _Compare __comp)
+    {
+      if (__first == __last) return __first;
+      _ForwardIterator __result = __first;
+      while (++__first != __last)
+ if (__comp(__result, __first))
+   __result = __first;
+      return __result;
+    }
+# 5727 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator>
+    constexpr
+    inline _ForwardIterator
+    max_element(_ForwardIterator __first, _ForwardIterator __last)
+    {
+
+     
+     
+
+      ;
+      ;
+
+      return std::__max_element(__first, __last,
+    __gnu_cxx::__ops::__iter_less_iter());
+    }
+# 5752 "C:/mingw64/include/c++/13.1.0/bits/stl_algo.h" 3
+  template<typename _ForwardIterator, typename _Compare>
+    constexpr
+    inline _ForwardIterator
+    max_element(_ForwardIterator __first, _ForwardIterator __last,
+  _Compare __comp)
+    {
+
+     
+     
+
+
+      ;
+      ;
+
+      return std::__max_element(__first, __last,
+    __gnu_cxx::__ops::__iter_comp_iter(__comp));
+    }
+
+
+
+  template<typename _Tp>
+    constexpr
+    inline _Tp
+    min(initializer_list<_Tp> __l)
+    {
+      ;
+      return *std::__min_element(__l.begin(), __l.end(),
+   __gnu_cxx::__ops::__iter_less_iter());
+    }
+
+  template<typename _Tp, typename _Compare>
+    constexpr
+    inline _Tp
+    min(initializer_list<_Tp> __l, _Compare __comp)
+    {
+      ;
+      return *std::__min_element(__l.begin(), __l.end(),
+   __gnu_cxx::__ops::__iter_comp_iter(__comp));
+    }
+
+  template<typename _Tp>
+    constexpr
+    inline _Tp
+    max(initializer_list<_Tp> __l)
+    {
+      ;
+      return *std::__max_element(__l.begin(), __l.end(),
+   __gnu_cxx::__ops::__iter_less_iter());
+    }
+
+  template<typename _Tp, typename _Compare>
+    constexpr
+    inline _Tp
+    max(initializer_list<_Tp> __l, _Compare __comp)
+    {
+      ;
+      return *std::__max_element(__l.begin(), __l.end(),
+   __gnu_cxx::__ops::__iter_comp_iter(__comp));
+    }
+
+
+
+
+  template<typename _InputIterator, typename _RandomAccessIterator,
+           typename _Size, typename _UniformRandomBitGenerator>
+    _RandomAccessIterator
+    __sample(_InputIterator __first, _InputIterator __last, input_iterator_tag,
+      _RandomAccessIterator __out, random_access_iterator_tag,
+      _Size __n, _UniformRandomBitGenerator&& __g)
+    {
+      using __distrib_type = uniform_int_distribution<_Size>;
+      using __param_type = typename __distrib_type::param_type;
+      __distrib_type __d{};
+      _Size __sample_sz = 0;
+      while (__first != __last && __sample_sz != __n)
+ {
+   __out[__sample_sz++] = *__first;
+   ++__first;
+ }
+      for (auto __pop_sz = __sample_sz; __first != __last;
+   ++__first, (void) ++__pop_sz)
+ {
+   const auto __k = __d(__g, __param_type{0, __pop_sz});
+   if (__k < __n)
+     __out[__k] = *__first;
+ }
+      return __out + __sample_sz;
+    }
+
+
+  template<typename _ForwardIterator, typename _OutputIterator, typename _Cat,
+           typename _Size, typename _UniformRandomBitGenerator>
+    _OutputIterator
+    __sample(_ForwardIterator __first, _ForwardIterator __last,
+      forward_iterator_tag,
+      _OutputIterator __out, _Cat,
+      _Size __n, _UniformRandomBitGenerator&& __g)
+    {
+      using __distrib_type = uniform_int_distribution<_Size>;
+      using __param_type = typename __distrib_type::param_type;
+      using _USize = make_unsigned_t<_Size>;
+      using _Gen = remove_reference_t<_UniformRandomBitGenerator>;
+      using __uc_type = common_type_t<typename _Gen::result_type, _USize>;
+
+      if (__first == __last)
+ return __out;
+
+      __distrib_type __d{};
+      _Size __unsampled_sz = std::distance(__first, __last);
+      __n = std::min(__n, __unsampled_sz);
+
+
+
+
+      const __uc_type __urngrange = __g.max() - __g.min();
+      if (__urngrange / __uc_type(__unsampled_sz) >= __uc_type(__unsampled_sz))
+
+
+        {
+   while (__n != 0 && __unsampled_sz >= 2)
+     {
+       const pair<_Size, _Size> __p =
+  __gen_two_uniform_ints(__unsampled_sz, __unsampled_sz - 1, __g);
+
+       --__unsampled_sz;
+       if (__p.first < __n)
+  {
+    *__out++ = *__first;
+    --__n;
+  }
+
+       ++__first;
+
+       if (__n == 0) break;
+
+       --__unsampled_sz;
+       if (__p.second < __n)
+  {
+    *__out++ = *__first;
+    --__n;
+  }
+
+       ++__first;
+     }
+        }
+
+
+
+      for (; __n != 0; ++__first)
+ if (__d(__g, __param_type{0, --__unsampled_sz}) < __n)
+   {
+     *__out++ = *__first;
+     --__n;
+   }
+      return __out;
+    }
+
+
+
+
+  template<typename _PopulationIterator, typename _SampleIterator,
+           typename _Distance, typename _UniformRandomBitGenerator>
+    _SampleIterator
+    sample(_PopulationIterator __first, _PopulationIterator __last,
+    _SampleIterator __out, _Distance __n,
+    _UniformRandomBitGenerator&& __g)
+    {
+      using __pop_cat = typename
+ std::iterator_traits<_PopulationIterator>::iterator_category;
+      using __samp_cat = typename
+ std::iterator_traits<_SampleIterator>::iterator_category;
+
+      static_assert(
+   __or_<is_convertible<__pop_cat, forward_iterator_tag>,
+  is_convertible<__samp_cat, random_access_iterator_tag>>::value,
+   "output range must use a RandomAccessIterator when input range"
+   " does not meet the ForwardIterator requirements");
+
+      static_assert(is_integral<_Distance>::value,
+      "sample size must be an integer type");
+
+      typename iterator_traits<_PopulationIterator>::difference_type __d = __n;
+      return std::
+ __sample(__first, __last, __pop_cat{}, __out, __samp_cat{}, __d,
+   std::forward<_UniformRandomBitGenerator>(__g));
+    }
+
+
+
+
+
+}
+# 62 "C:/mingw64/include/c++/13.1.0/algorithm" 2 3
+# 73 "C:/mingw64/include/c++/13.1.0/algorithm" 3
+# 1 "C:/mingw64/include/c++/13.1.0/pstl/glue_algorithm_defs.h" 1 3
+# 15 "C:/mingw64/include/c++/13.1.0/pstl/glue_algorithm_defs.h" 3
+# 1 "C:/mingw64/include/c++/13.1.0/pstl/execution_defs.h" 1 3
+# 15 "C:/mingw64/include/c++/13.1.0/pstl/execution_defs.h" 3
+namespace __pstl
+{
+namespace execution
+{
+inline namespace v1
+{
+
+
+class sequenced_policy
+{
+  public:
+
+    static constexpr std::false_type
+    __allow_unsequenced()
+    {
+        return std::false_type{};
+    }
+    static constexpr std::false_type
+    __allow_vector()
+    {
+        return std::false_type{};
+    }
+    static constexpr std::false_type
+    __allow_parallel()
+    {
+        return std::false_type{};
+    }
+};
+
+
+class parallel_policy
+{
+  public:
+
+    static constexpr std::false_type
+    __allow_unsequenced()
+    {
+        return std::false_type{};
+    }
+    static constexpr std::false_type
+    __allow_vector()
+    {
+        return std::false_type{};
+    }
+    static constexpr std::true_type
+    __allow_parallel()
+    {
+        return std::true_type{};
+    }
+};
+
+
+class parallel_unsequenced_policy
+{
+  public:
+
+    static constexpr std::true_type
+    __allow_unsequenced()
+    {
+        return std::true_type{};
+    }
+    static constexpr std::true_type
+    __allow_vector()
+    {
+        return std::true_type{};
+    }
+    static constexpr std::true_type
+    __allow_parallel()
+    {
+        return std::true_type{};
+    }
+};
+
+class unsequenced_policy
+{
+  public:
+
+    static constexpr std::true_type
+    __allow_unsequenced()
+    {
+        return std::true_type{};
+    }
+    static constexpr std::true_type
+    __allow_vector()
+    {
+        return std::true_type{};
+    }
+    static constexpr std::false_type
+    __allow_parallel()
+    {
+        return std::false_type{};
+    }
+};
+
+
+inline constexpr sequenced_policy seq{};
+inline constexpr parallel_policy par{};
+inline constexpr parallel_unsequenced_policy par_unseq{};
+inline constexpr unsequenced_policy unseq{};
+
+
+template <class _Tp>
+struct is_execution_policy : std::false_type
+{
+};
+
+template <>
+struct is_execution_policy<__pstl::execution::sequenced_policy> : std::true_type
+{
+};
+template <>
+struct is_execution_policy<__pstl::execution::parallel_policy> : std::true_type
+{
+};
+template <>
+struct is_execution_policy<__pstl::execution::parallel_unsequenced_policy> : std::true_type
+{
+};
+template <>
+struct is_execution_policy<__pstl::execution::unsequenced_policy> : std::true_type
+{
+};
+
+
+template <class _Tp>
+constexpr bool is_execution_policy_v = __pstl::execution::is_execution_policy<_Tp>::value;
+
+
+}
+}
+
+namespace __internal
+{
+template <class _ExecPolicy, class _Tp>
+
+using __enable_if_execution_policy =
+    typename std::enable_if<__pstl::execution::is_execution_policy<std::__remove_cvref_t<_ExecPolicy>>::value,
+                            _Tp>::type;
+
+
+
+
+
+}
+
+}
+# 16 "C:/mingw64/include/c++/13.1.0/pstl/glue_algorithm_defs.h" 2 3
+
+namespace std
+{
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Predicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, bool>
+any_of(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, _Predicate __pred);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Predicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, bool>
+all_of(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, _Predicate __pred);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Predicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, bool>
+none_of(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, _Predicate __pred);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Function>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, void>
+for_each(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, _Function __f);
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Size, class _Function>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+for_each_n(_ExecutionPolicy&& __exec, _ForwardIterator __first, _Size __n, _Function __f);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Predicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+find_if(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, _Predicate __pred);
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Predicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+find_if_not(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, _Predicate __pred);
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Tp>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+find(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, const _Tp& __value);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _BinaryPredicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator1>
+find_end(_ExecutionPolicy&& __exec, _ForwardIterator1 __first, _ForwardIterator1 __last, _ForwardIterator2 __s_first,
+         _ForwardIterator2 __s_last, _BinaryPredicate __pred);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator1>
+find_end(_ExecutionPolicy&& __exec, _ForwardIterator1 __first, _ForwardIterator1 __last, _ForwardIterator2 __s_first,
+         _ForwardIterator2 __s_last);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _BinaryPredicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator1>
+find_first_of(_ExecutionPolicy&& __exec, _ForwardIterator1 __first, _ForwardIterator1 __last,
+              _ForwardIterator2 __s_first, _ForwardIterator2 __s_last, _BinaryPredicate __pred);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator1>
+find_first_of(_ExecutionPolicy&& __exec, _ForwardIterator1 __first, _ForwardIterator1 __last,
+              _ForwardIterator2 __s_first, _ForwardIterator2 __s_last);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+adjacent_find(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last);
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _BinaryPredicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+adjacent_find(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, _BinaryPredicate __pred);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Tp>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy,
+                                                 typename iterator_traits<_ForwardIterator>::difference_type>
+count(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, const _Tp& __value);
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Predicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy,
+                                                 typename iterator_traits<_ForwardIterator>::difference_type>
+count_if(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, _Predicate __pred);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _BinaryPredicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator1>
+search(_ExecutionPolicy&& __exec, _ForwardIterator1 __first, _ForwardIterator1 __last, _ForwardIterator2 __s_first,
+       _ForwardIterator2 __s_last, _BinaryPredicate __pred);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator1>
+search(_ExecutionPolicy&& __exec, _ForwardIterator1 __first, _ForwardIterator1 __last, _ForwardIterator2 __s_first,
+       _ForwardIterator2 __s_last);
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Size, class _Tp, class _BinaryPredicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+search_n(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, _Size __count,
+         const _Tp& __value, _BinaryPredicate __pred);
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Size, class _Tp>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+search_n(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, _Size __count,
+         const _Tp& __value);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator2>
+copy(_ExecutionPolicy&& __exec, _ForwardIterator1 __first, _ForwardIterator1 __last, _ForwardIterator2 __result);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _Size, class _ForwardIterator2>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator2>
+copy_n(_ExecutionPolicy&& __exec, _ForwardIterator1 __first, _Size __n, _ForwardIterator2 __result);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _Predicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator2>
+copy_if(_ExecutionPolicy&& __exec, _ForwardIterator1 __first, _ForwardIterator1 __last, _ForwardIterator2 result,
+        _Predicate __pred);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator2>
+swap_ranges(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1,
+            _ForwardIterator2 __first2);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _UnaryOperation>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator2>
+transform(_ExecutionPolicy&& __exec, _ForwardIterator1 __first, _ForwardIterator1 __last, _ForwardIterator2 __result,
+          _UnaryOperation __op);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _ForwardIterator,
+          class _BinaryOperation>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+transform(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1, _ForwardIterator2 __first2,
+          _ForwardIterator __result, _BinaryOperation __op);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _UnaryPredicate, class _Tp>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, void>
+replace_if(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, _UnaryPredicate __pred,
+           const _Tp& __new_value);
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Tp>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, void>
+replace(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, const _Tp& __old_value,
+        const _Tp& __new_value);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _UnaryPredicate, class _Tp>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator2>
+replace_copy_if(_ExecutionPolicy&& __exec, _ForwardIterator1 __first, _ForwardIterator1 __last,
+                _ForwardIterator2 __result, _UnaryPredicate __pred, const _Tp& __new_value);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _Tp>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator2>
+replace_copy(_ExecutionPolicy&& __exec, _ForwardIterator1 __first, _ForwardIterator1 __last, _ForwardIterator2 __result,
+             const _Tp& __old_value, const _Tp& __new_value);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Tp>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, void>
+fill(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, const _Tp& __value);
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Size, class _Tp>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+fill_n(_ExecutionPolicy&& __exec, _ForwardIterator __first, _Size __count, const _Tp& __value);
+
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Generator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, void>
+generate(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, _Generator __g);
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Size, class _Generator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+generate_n(_ExecutionPolicy&& __exec, _ForwardIterator __first, _Size count, _Generator __g);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _Predicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator2>
+remove_copy_if(_ExecutionPolicy&& __exec, _ForwardIterator1 __first, _ForwardIterator1 __last,
+               _ForwardIterator2 __result, _Predicate __pred);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _Tp>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator2>
+remove_copy(_ExecutionPolicy&& __exec, _ForwardIterator1 __first, _ForwardIterator1 __last, _ForwardIterator2 __result,
+            const _Tp& __value);
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _UnaryPredicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+remove_if(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, _UnaryPredicate __pred);
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Tp>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+remove(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, const _Tp& __value);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _BinaryPredicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+unique(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, _BinaryPredicate __pred);
+
+template <class _ExecutionPolicy, class _ForwardIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+unique(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _BinaryPredicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator2>
+unique_copy(_ExecutionPolicy&& __exec, _ForwardIterator1 __first, _ForwardIterator1 __last, _ForwardIterator2 __result,
+            _BinaryPredicate __pred);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator2>
+unique_copy(_ExecutionPolicy&& __exec, _ForwardIterator1 __first, _ForwardIterator1 __last, _ForwardIterator2 __result);
+
+
+
+template <class _ExecutionPolicy, class _BidirectionalIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, void>
+reverse(_ExecutionPolicy&& __exec, _BidirectionalIterator __first, _BidirectionalIterator __last);
+
+template <class _ExecutionPolicy, class _BidirectionalIterator, class _ForwardIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+reverse_copy(_ExecutionPolicy&& __exec, _BidirectionalIterator __first, _BidirectionalIterator __last,
+             _ForwardIterator __d_first);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+rotate(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __middle, _ForwardIterator __last);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator2>
+rotate_copy(_ExecutionPolicy&& __exec, _ForwardIterator1 __first, _ForwardIterator1 __middle, _ForwardIterator1 __last,
+            _ForwardIterator2 __result);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _UnaryPredicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, bool>
+is_partitioned(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, _UnaryPredicate __pred);
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _UnaryPredicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+partition(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, _UnaryPredicate __pred);
+
+template <class _ExecutionPolicy, class _BidirectionalIterator, class _UnaryPredicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _BidirectionalIterator>
+stable_partition(_ExecutionPolicy&& __exec, _BidirectionalIterator __first, _BidirectionalIterator __last,
+                 _UnaryPredicate __pred);
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _ForwardIterator1, class _ForwardIterator2,
+          class _UnaryPredicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, std::pair<_ForwardIterator1, _ForwardIterator2>>
+partition_copy(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last,
+               _ForwardIterator1 __out_true, _ForwardIterator2 __out_false, _UnaryPredicate __pred);
+
+
+
+template <class _ExecutionPolicy, class _RandomAccessIterator, class _Compare>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, void>
+sort(_ExecutionPolicy&& __exec, _RandomAccessIterator __first, _RandomAccessIterator __last, _Compare __comp);
+
+template <class _ExecutionPolicy, class _RandomAccessIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, void>
+sort(_ExecutionPolicy&& __exec, _RandomAccessIterator __first, _RandomAccessIterator __last);
+
+
+
+template <class _ExecutionPolicy, class _RandomAccessIterator, class _Compare>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, void>
+stable_sort(_ExecutionPolicy&& __exec, _RandomAccessIterator __first, _RandomAccessIterator __last, _Compare __comp);
+
+template <class _ExecutionPolicy, class _RandomAccessIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, void>
+stable_sort(_ExecutionPolicy&& __exec, _RandomAccessIterator __first, _RandomAccessIterator __last);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _BinaryPredicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, std::pair<_ForwardIterator1, _ForwardIterator2>>
+mismatch(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1, _ForwardIterator2 __first2,
+         _ForwardIterator2 __last2, _BinaryPredicate __pred);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _BinaryPredicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, std::pair<_ForwardIterator1, _ForwardIterator2>>
+mismatch(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1, _ForwardIterator2 __first2,
+         _BinaryPredicate __pred);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, std::pair<_ForwardIterator1, _ForwardIterator2>>
+mismatch(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1, _ForwardIterator2 __first2,
+         _ForwardIterator2 __last2);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, std::pair<_ForwardIterator1, _ForwardIterator2>>
+mismatch(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1, _ForwardIterator2 __first2);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _BinaryPredicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, bool>
+equal(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1, _ForwardIterator2 __first2,
+      _BinaryPredicate __p);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, bool>
+equal(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1, _ForwardIterator2 __first2);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _BinaryPredicate>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, bool>
+equal(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1, _ForwardIterator2 __first2,
+      _ForwardIterator2 __last2, _BinaryPredicate __p);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, bool>
+equal(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1, _ForwardIterator2 __first2,
+      _ForwardIterator2 __last2);
+
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator2>
+move(_ExecutionPolicy&& __exec, _ForwardIterator1 __first, _ForwardIterator1 __last, _ForwardIterator2 __d_first);
+
+
+
+template <class _ExecutionPolicy, class _RandomAccessIterator, class _Compare>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, void>
+partial_sort(_ExecutionPolicy&& __exec, _RandomAccessIterator __first, _RandomAccessIterator __middle,
+             _RandomAccessIterator __last, _Compare __comp);
+
+template <class _ExecutionPolicy, class _RandomAccessIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, void>
+partial_sort(_ExecutionPolicy&& __exec, _RandomAccessIterator __first, _RandomAccessIterator __middle,
+             _RandomAccessIterator __last);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _RandomAccessIterator, class _Compare>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _RandomAccessIterator>
+partial_sort_copy(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last,
+                  _RandomAccessIterator __d_first, _RandomAccessIterator __d_last, _Compare __comp);
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _RandomAccessIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _RandomAccessIterator>
+partial_sort_copy(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last,
+                  _RandomAccessIterator __d_first, _RandomAccessIterator __d_last);
+
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Compare>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+is_sorted_until(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, _Compare __comp);
+
+template <class _ExecutionPolicy, class _ForwardIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+is_sorted_until(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last);
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Compare>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, bool>
+is_sorted(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, _Compare __comp);
+
+template <class _ExecutionPolicy, class _ForwardIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, bool>
+is_sorted(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last);
+
+
+
+template <class _ExecutionPolicy, class _RandomAccessIterator, class _Compare>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, void>
+nth_element(_ExecutionPolicy&& __exec, _RandomAccessIterator __first, _RandomAccessIterator __nth,
+            _RandomAccessIterator __last, _Compare __comp);
+
+template <class _ExecutionPolicy, class _RandomAccessIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, void>
+nth_element(_ExecutionPolicy&& __exec, _RandomAccessIterator __first, _RandomAccessIterator __nth,
+            _RandomAccessIterator __last);
+
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _ForwardIterator,
+          class _Compare>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+merge(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1, _ForwardIterator2 __first2,
+      _ForwardIterator2 __last2, _ForwardIterator __d_first, _Compare __comp);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _ForwardIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+merge(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1, _ForwardIterator2 __first2,
+      _ForwardIterator2 __last2, _ForwardIterator __d_first);
+
+template <class _ExecutionPolicy, class _BidirectionalIterator, class _Compare>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, void>
+inplace_merge(_ExecutionPolicy&& __exec, _BidirectionalIterator __first, _BidirectionalIterator __middle,
+              _BidirectionalIterator __last, _Compare __comp);
+
+template <class _ExecutionPolicy, class _BidirectionalIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, void>
+inplace_merge(_ExecutionPolicy&& __exec, _BidirectionalIterator __first, _BidirectionalIterator __middle,
+              _BidirectionalIterator __last);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _Compare>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, bool>
+includes(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1, _ForwardIterator2 __first2,
+         _ForwardIterator2 __last2, _Compare __comp);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, bool>
+includes(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1, _ForwardIterator2 __first2,
+         _ForwardIterator2 __last2);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _ForwardIterator,
+          class _Compare>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+set_union(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1, _ForwardIterator2 __first2,
+          _ForwardIterator2 __last2, _ForwardIterator __result, _Compare __comp);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _ForwardIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+set_union(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1, _ForwardIterator2 __first2,
+          _ForwardIterator2 __last2, _ForwardIterator __result);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _ForwardIterator,
+          class _Compare>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+set_intersection(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1,
+                 _ForwardIterator2 __first2, _ForwardIterator2 __last2, _ForwardIterator __result, _Compare __comp);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _ForwardIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+set_intersection(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1,
+                 _ForwardIterator2 __first2, _ForwardIterator2 __last2, _ForwardIterator __result);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _ForwardIterator,
+          class _Compare>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+set_difference(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1,
+               _ForwardIterator2 __first2, _ForwardIterator2 __last2, _ForwardIterator __result, _Compare __comp);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _ForwardIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+set_difference(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1,
+               _ForwardIterator2 __first2, _ForwardIterator2 __last2, _ForwardIterator __result);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _ForwardIterator,
+          class _Compare>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+set_symmetric_difference(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1,
+                         _ForwardIterator2 __first2, _ForwardIterator2 __last2, _ForwardIterator result,
+                         _Compare __comp);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _ForwardIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+set_symmetric_difference(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1,
+                         _ForwardIterator2 __first2, _ForwardIterator2 __last2, _ForwardIterator __result);
+
+
+template <class _ExecutionPolicy, class _RandomAccessIterator, class _Compare>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _RandomAccessIterator>
+is_heap_until(_ExecutionPolicy&& __exec, _RandomAccessIterator __first, _RandomAccessIterator __last, _Compare __comp);
+
+template <class _ExecutionPolicy, class _RandomAccessIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _RandomAccessIterator>
+is_heap_until(_ExecutionPolicy&& __exec, _RandomAccessIterator __first, _RandomAccessIterator __last);
+
+template <class _ExecutionPolicy, class _RandomAccessIterator, class _Compare>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, bool>
+is_heap(_ExecutionPolicy&& __exec, _RandomAccessIterator __first, _RandomAccessIterator __last, _Compare __comp);
+
+template <class _ExecutionPolicy, class _RandomAccessIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, bool>
+is_heap(_ExecutionPolicy&& __exec, _RandomAccessIterator __first, _RandomAccessIterator __last);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Compare>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+min_element(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, _Compare __comp);
+
+template <class _ExecutionPolicy, class _ForwardIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+min_element(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last);
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Compare>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+max_element(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, _Compare __comp);
+
+template <class _ExecutionPolicy, class _ForwardIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, _ForwardIterator>
+max_element(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last);
+
+template <class _ExecutionPolicy, class _ForwardIterator, class _Compare>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, std::pair<_ForwardIterator, _ForwardIterator>>
+minmax_element(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last, _Compare __comp);
+
+template <class _ExecutionPolicy, class _ForwardIterator>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, std::pair<_ForwardIterator, _ForwardIterator>>
+minmax_element(_ExecutionPolicy&& __exec, _ForwardIterator __first, _ForwardIterator __last);
+
+
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2, class _Compare>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, bool>
+lexicographical_compare(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1,
+                        _ForwardIterator2 __first2, _ForwardIterator2 __last2, _Compare __comp);
+
+template <class _ExecutionPolicy, class _ForwardIterator1, class _ForwardIterator2>
+__pstl::__internal::__enable_if_execution_policy<_ExecutionPolicy, bool>
+lexicographical_compare(_ExecutionPolicy&& __exec, _ForwardIterator1 __first1, _ForwardIterator1 __last1,
+                        _ForwardIterator2 __first2, _ForwardIterator2 __last2);
+
+}
+# 74 "C:/mingw64/include/c++/13.1.0/algorithm" 2 3
+# 7 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp" 2
+
+
+# 8 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp"
 using namespace std;
 
  string path = "C:/Users/daniilscaletta/Desktop/ToDoList/Resources/DataBase.txt";
@@ -42859,9 +49537,9 @@ void add_note(const string& new_note)
     {
         cout << "file is NOT opened" << endl;
         exit(
-# 32 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp" 3
+# 33 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp" 3
             1
-# 32 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp"
+# 33 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp"
                         );
     }
     file << new_note << endl;
@@ -42881,9 +49559,9 @@ void see_all_notes()
     {
         cout << "file is NOT opened" << endl;
         exit(
-# 50 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp" 3
+# 51 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp" 3
             1
-# 50 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp"
+# 51 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp"
                         );
     }
 
@@ -42908,9 +49586,9 @@ vector<string> find_one_note(const string& note_to_find)
     {
         cout << "File is empty! Add notes" << endl;
         exit(
-# 73 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp" 3
+# 74 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp" 3
             1
-# 73 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp"
+# 74 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp"
                         );
     }
 
@@ -42930,4 +49608,66 @@ vector<string> find_one_note(const string& note_to_find)
     file.close();
 
     return found_notes;
+}
+
+void remove_note(int number_of_note)
+{
+    ifstream fin;
+    fin.open(path);
+
+    if(!fin.is_open())
+    {
+        cout << "file is NOT opened" << endl;
+        exit(
+# 103 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp" 3
+            1
+# 103 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp"
+                        );
+    }
+
+    vector<string> notes;
+    string one_note;
+    while(getline(fin, one_note))
+    {
+        notes.push_back(one_note);
+        if(fin.eof()) break;
+    }
+    notes.erase(notes.begin() + number_of_note - 1);
+    fin.close();
+
+    ofstream fout;
+    fout.open(path, ofstream::out);
+
+    if(!fout.is_open())
+    {
+        cout << "file is NOT opened" << endl;
+        exit(
+# 122 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp" 3
+            1
+# 122 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp"
+                        );
+    }
+
+    for(auto& a : notes) fout << a << endl;
+    fout.close();
+    cout << "Note deleted! " << endl;
+}
+
+void remove_all_notes()
+{
+    ofstream file;
+
+    file.open(path, ofstream::out);
+    if(!file.is_open())
+    {
+        cout << "file is NOT opened" << endl;
+        exit(
+# 138 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp" 3
+            1
+# 138 "C:\\Users\\daniilscaletta\\Desktop\\ToDoList\\Prog\\functions.cpp"
+                        );
+    }
+
+    file.close();
+    cout << "All notes are deleted!" << endl;
 }
