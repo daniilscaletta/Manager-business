@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <vector>
 #include "functions.h"
 
 using namespace std;
@@ -44,10 +45,20 @@ int main(void)
                     break;
                 
                 case FIND_NOTE:
+                {
                     system("cls");
                     cout << " Find Note... " << endl;
-                    break;
 
+                    string note_to_find;
+                    getline(cin, note_to_find);
+                    cout << "Note to fine : ";
+                    getline(cin, note_to_find);
+
+                    vector<string> found_notes = find_one_note(note_to_find);
+                    for(auto& a : found_notes) cout << a << endl;
+                    break;
+                }
+                    
                 case REMOVE_NOTE:
                     system("cls");
                     cout << " Remove Note... " << endl;                    
@@ -64,6 +75,5 @@ int main(void)
             }
         }
         
-    
     return 0;
 }

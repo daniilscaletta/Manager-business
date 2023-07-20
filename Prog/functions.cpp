@@ -2,6 +2,7 @@
 #include "functions.h"
 #include <string>
 #include <fstream>
+#include <vector>
 
 using namespace std;
 
@@ -9,6 +10,7 @@ using namespace std;
 
 void show_menu()
 {
+    cout << endl;
     cout << "[1] Add Notes " << endl;
     cout << "[2] Show All Notes " << endl;
     cout << "[3] Find Note " << endl;
@@ -57,5 +59,34 @@ void see_all_notes()
     }
 
     file.close();
+}
 
+vector<string> find_one_note(const string& note_to_find)
+{
+    ifstream file;
+
+    file.open(path);
+
+    if(!file.is_open())
+    {
+        cout << "File is empty! Add notes" << endl;
+        exit(EXIT_FAILURE);
+    }
+    
+    string one_note;
+    vector<string> found_notes;
+    int count = 0;
+
+    while(getline(file, one_note))
+    {
+        if(one_note.find(note_to_find) != -1) 
+        {
+            count++;
+            found_notes.push_back(one_note);
+        }    
+        if(file.eof()) break;
+    }
+    file.close();
+
+    return found_notes;
 }
