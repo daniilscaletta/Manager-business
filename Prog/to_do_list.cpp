@@ -16,23 +16,31 @@ enum CHOICE
 
 int main(void)
 {   
-        show_menu();
-        cout << "Your choice: " << endl;
         int choice = 0;
+        string new_node;
 
         while(true)
         {
+            show_menu();   
+            cout << "Your choice: " << endl;
             cin >> choice;
             switch (choice)
             {
                 case ADD_NOTE:
                     system("cls");
                     cout << " Add Notes... " << endl;
+
+                    getline(cin, new_node); //перенос строки от cin
+                    getline(cin, new_node);
+                    cout << "Add Note : ";
+                    add_note(new_node);
+
                     break;
                 
                 case SEE_ALL_NOTES:
                     system("cls");
                     cout << " Show All Notes... " << endl;
+                    see_all_notes();
                     break;
                 
                 case FIND_NOTE:
